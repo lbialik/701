@@ -22,4 +22,3 @@ def load_sentences(data):
         sentences[sentence_number]['SRC adverb'] = src_adv
 
     return sentences
-
