@@ -1,0 +1,9 @@
+Experiment R-value explanation:
+
+For example, in the experiment 1 ff file, for a single trial "123,1,1,11,174,,179,119,,325,174," 
+This is item 1, condition 11, and R1 = 174, R2 = '', R3 = 179, R4 = 119, R5 = '', R6 = 325, R7 = 174, R8 = ? (maybe the matrix that follows?). 
+
+Item 1 is "The bus driver^ that^ the kids^ followed^^ wondered^ about the location of a hotel."
+Condition 11 =  vanilla ORC
+
+So R1 --> 'The bus driver', R2 --> ' that', R3 --> ' the kids', R4 --> ' followed', R5 --> '', R6 --> ' wondered', R7 --> ' about the location of a hotel.', R8 --> ''.
