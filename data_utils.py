@@ -4,14 +4,19 @@ import re
 from collections import defaultdict
 from pprint import pprint
 
-exp_1_path = "data/Experiment1/"
-exp_2_path = "data/Experiment2/"
+exp_1_path = "data/Experiment1/Experiment1"
+exp_2_path = "data/Experiment2"
 
-exp_1_overview = exp_1_path + "Experiment1/E4_del.txt"
-exp_2_overview = exp_2_path + "E2.txt"
+exp_1_overview = exp_1_path + "/E4_del.txt"
+exp_2_overview = exp_2_path + "/E2.txt"
 
 exp_1_condition_map = {'11': 'ORC', '12': 'ORC', '13': 'SRC', '14': 'SRC'}
 exp_2_condition_map = {'1': 'ORC', '2': 'ORC', '3': 'ORC', '4': 'ORC', '5': 'SRC', '6': 'SRC'}
+
+measurement_types = ["ff", "fp", "gp", "tt"]
+
+def exp_condition_map(exp_number):
+    return exp_1_condition_map if exp_number == 1 else exp_2_condition_map
 
 def parse_sentence(line):
     words = line.split()[2:]
@@ -20,18 +25,17 @@ def parse_sentence(line):
     return sentence
 
 def extract_item_and_condition_from_trial(line, exp_number):
-    condition_map = exp_1_condition_map if exp_number == 1 else exp_2_condition_map
+    condition_map = exp_condition_map(exp_number)
     id = line.split()[1]
     _, condition, item, _ = re.split("[EID]", id)
     if condition in condition_map:
-        condition = condition_map[condition]
         condition_valid = True
     else: condition_valid = False
     if exp_number == 1:
         item = str(int(item) - 120)
     return item, condition, condition_valid
 
-def parse_experiment(exp_number):
+def extract_sentences(exp_number):
     sentences = defaultdict(lambda: defaultdict(lambda: []))
     file = exp_1_overview if exp_number == 1 else exp_2_overview
     with open(file) as f:
@@ -43,37 +47,72 @@ def parse_experiment(exp_number):
             item_valid = len(item) > 0
             if "inline" in line and condition_valid and item_valid:
                 sentence = parse_sentence(line)
-                sentences[item][condition].append(sentence)
+                sentences[item][condition] = sentence
             if "end" in line and condition_valid and item_valid:
                 condition, item = "", ""
     # pprint(sentences)
     # print(f'{len(sentences)} total items')
     return sentences
 
-def convert_sentences_to_measurements(sentences, exp_path):
-    measurements = {}
-    measurement_types = ["ff", "fp", "gp", "tt"]
-    for measurement in measurement_types:
-        m_file = f"{exp_path}/ixs/{measurement}.ixs"
-        measurements[measurement] = 0
+def parse_measurement_file(m_file):
+    measurements = defaultdict(lambda:[])
+    with open(m_file) as f:
+        lines = f.readlines()
+        for line in lines[1:]:
+            line = line.replace('\n', '')
+            _,_,item,condition,r1,r2,r3,r4,r5,r6,r7,r8 = line.split(',')
+            if int(condition) > 0:
+                times = [int(time) if len(time)>0 else -1 for time in [r1,r2,r3,r4,r5,r6,r7,r8]]
+                measurements[(item, condition)].append(times)
     return measurements
 
-def combine_sentences(sentences_collection):
-    for sentences in sentences_collection:
-        pass
-
-def combine_measurements(measurements_collection):
-    for measurements in measurements_collection:
-        pass
+def extract_measurements(exp_number):
+    exp_path = exp_1_path if exp_number == 1 else exp_2_path
+    measurements = {}
+    for measurement in measurement_types:
+        m_file = f"{exp_path}/ixs/{measurement}.ixs"
+        measurements[measurement] = parse_measurement_file(m_file)
+    return measurements
 
 def process_data():
-    exp_1_sentences = parse_experiment(1)
-    exp_2_sentences = parse_experiment(2)
-    exp_1_measurements = convert_sentences_to_measurements(exp_1_sentences)
-    exp_2_measurements = convert_sentences_to_measurements(exp_2_sentences)
-    sentences = combine_sentences(exp_1_sentences, exp_2_sentences)
-    measurements = combine_measurements(exp_1_measurements, exp_2_measurements)
-    return sentences, measurements
+    data = {
+        'ORC': defaultdict(lambda: []), 
+        'SRC': defaultdict(lambda: [])
+        }
+
+    for exp_number in [1, 2]:
+        sentences = extract_sentences(exp_number)
+        measurements = extract_measurements(exp_number)
+        condition_map = exp_condition_map(exp_number)
+        for item in sentences:
+            for condition in sentences[item]:
+                general_condition = condition_map[condition]
+                element = {}
+                sentence = sentences[item][condition]
+                if sentence in [e["sentence"] for e in data[general_condition][item]]:
+                    print('sentence already included')
+                element['sentence'] = sentence
+                for measurement in measurement_types:
+                    element[measurement] = measurements[measurement][(item, condition)]
+                data[general_condition][item].append(element)
+    return data
+
+## TODO: combine exp 1 and exp 2 into data 
+
+data = process_data()
+# pprint(data)
+
+# for condition in data:
+#     print('condition = ', condition)
+#     for item in data[condition]:
+#         print('item = ', item)
+#         for element in data[condition][item]:
+#             print('sentence = ', element['sentence'])
+            # print(len(element['ff']))
+            # print(len(element['fp']))
+            # print(len(element['gp']))
+            # print(len(element['tt']))
+
 
 
 
