@@ -7,3 +7,14 @@ Item 1 is "The bus driver^ that^ the kids^ followed^^ wondered^ about the locati
 Condition 11 =  vanilla ORC
 
 So R1 --> 'The bus driver', R2 --> ' that', R3 --> ' the kids', R4 --> ' followed', R5 --> '', R6 --> ' wondered', R7 --> ' about the location of a hotel.', R8 --> ''.
+
+
+Experiment 2
+Item 36
+Condition 1: The celebrity that the waiter harassed called security following the incident.
+Condition 3: The celebrity that the waiter harassed on Friday called security following the incident.
+Condition 2: The celebrity that the waiter complained to called security following the incident.
+Condition 4: The celebrity that the waiter complained to on Friday called security following the
+incident.
+Condition 5: The celebrity that harassed the waiter called security following the incident.
+Condition 6: The celebrity that harassed the waiter on Friday called security following the incident. 

@@ -3,6 +3,7 @@ import json
 import re 
 from collections import defaultdict
 from pprint import pprint
+import numpy as np
 
 exp_1_path = "data/Experiment1/Experiment1"
 exp_2_path = "data/Experiment2"
@@ -79,7 +80,6 @@ def process_data():
         'ORC': defaultdict(lambda: []), 
         'SRC': defaultdict(lambda: [])
         }
-
     for exp_number in [1, 2]:
         sentences = extract_sentences(exp_number)
         measurements = extract_measurements(exp_number)
@@ -89,18 +89,93 @@ def process_data():
                 general_condition = condition_map[condition]
                 element = {}
                 sentence = sentences[item][condition]
-                if sentence in [e["sentence"] for e in data[general_condition][item]]:
-                    print('sentence already included')
+                # if sentence in [e["sentence"] for e in data[general_condition][item]]:
+                #     print('sentence already included')
+                #     print(sentence) 
+                #     print(item, condition)
                 element['sentence'] = sentence
                 for measurement in measurement_types:
                     element[measurement] = measurements[measurement][(item, condition)]
                 data[general_condition][item].append(element)
     return data
 
-## TODO: combine exp 1 and exp 2 into data 
+def average_data(data):
+    avg_data = {
+        'ORC': defaultdict(lambda: []), 
+        'SRC': defaultdict(lambda: [])
+        }
+    for condition in data:
+        for item in data[condition]:
+            for element in data[condition][item]:
+                for measure in measurement_types:
+                    element[measure] = np.round(np.mean(element[measure], 0), decimals = 3).tolist()
+                avg_data[condition][item].append(element)
+    return avg_data
 
 data = process_data()
-# pprint(data)
+avg_data = average_data(data)
+# pprint(avg_data)
+
+sentences = []
+count = 0
+for condition in avg_data:
+        for item in avg_data[condition]:
+            for element in avg_data[condition][item]:
+                if element['sentence'] not in sentences:
+                    sentences.append(element['sentence'])
+                count+=1
+print(f'{len(sentences)} unique sentences, {count} sentences total')
+
+exp_1_sentences = extract_sentences(1)
+exp_2_sentences = extract_sentences(2)
+print(len([exp_1_sentences[item][condition] for item in exp_1_sentences for condition in exp_1_sentences[item]]))
+print(len([exp_2_sentences[item][condition] for item in exp_2_sentences for condition in exp_2_sentences[item]]))
+
+
+
+
+## Code to be deleted
+
+# exp_1_sentences = extract_sentences(1)
+# exp_2_sentences = extract_sentences(2)
+# for item in exp_1_sentences:
+#     ## vanilla ORC
+#     one = exp_1_sentences[item]['11']
+#     two = exp_2_sentences[item]['1']
+#     if one != two:
+#         print('item ', item)
+#         print('vanilla ORC doesn\'t match')
+#         print("exp 1 sentence = ", one)
+#         print("exp 2 sentence = ", two)
+#         print()
+#     ## ORC + adv
+#     one = exp_1_sentences[item]['12']
+#     two = exp_2_sentences[item]['3']
+#     if one != two:
+#         print('item ', item)
+#         print('ORC + adv doesn\'t match')
+#         print("exp 1 sentence = ", one)
+#         print("exp 2 sentence = ", two)
+#         print()
+#     ## vanilla SRC
+#     one = exp_1_sentences[item]['13']
+#     two = exp_2_sentences[item]['5']
+#     if one != two:
+#         print('item ', item)
+#         print('SRC doesn\'t match')
+#         print("exp 1 sentence = ", one)
+#         print("exp 2 sentence = ", two)
+#         print()
+#     ## SRC + adv
+#     one = exp_1_sentences[item]['14']
+#     two = exp_2_sentences[item]['6']
+#     if one != two:
+#         print('item ', item)
+#         print('SRC + adv doesn\'t match')
+#         print("exp 1 sentence = ", one)
+#         print("exp 2 sentence = ", two)
+#         print()
+
 
 # for condition in data:
 #     print('condition = ', condition)
@@ -113,11 +188,6 @@ data = process_data()
             # print(len(element['gp']))
             # print(len(element['tt']))
 
-
-
-
-
-## Code to be deleted
 
 # def load_sentences(data):
 #     '''Takes a JSON object as input and returns a dictionary e.g. {'1': 'ORC': 'sentence'}'''
