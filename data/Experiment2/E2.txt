@@ -1,0 +1,4025 @@
+trial E1I1D0
+  gc_rect =             (340 20 410 60)
+  inline =              |The bus driver^ that^ the kids^ followed^^ wondered^ about the location of a hotel.^\n
+  max_display_time =    15000
+  trial_type =          sentence
+end E1I1D0
+
+trial E2I1D0
+  gc_rect =             (340 20 410 60)
+  inline =              |The bus driver^ that^ the kids^ laughed at^^ wondered^ about the location of a hotel.^\n
+  max_display_time =    15000
+  trial_type =          sentence
+end E2I1D0
+
+trial E3I1D0
+  gc_rect =             (340 20 410 60)
+  inline =              |The bus driver^ that^ the kids^ followed^ during the day^ wondered^ about the location of a hotel.^\n
+  max_display_time =    15000
+  trial_type =          sentence
+end E3I1D0
+
+trial E4I1D0
+  gc_rect =             (340 20 410 60)
+  inline =              |The bus driver^ that^ the kids^ laughed at^ during the day^ wondered^ about the location of a hotel.^\n
+  max_display_time =    15000
+  trial_type =          sentence
+end E4I1D0
+
+trial E5I1D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The bus driver^ that^ followed^ the kids^^ wondered^ about the location of a hotel.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I1D0
+
+trial E6I1D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The bus driver^ that^ followed^ the kids^ during the day^ wondered^ about the location of a hotel.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I1D0
+
+trial E101I1D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What did the bus driver want to find?\n\na hotel                      some kids\n
+  max_display_time =	15000
+  trial_type =		question
+end E101I1D1
+
+trial E1I2D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The chef^ that^ the waiter^ distracted^^ poured^ the flour onto the counter.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I2D0
+
+trial E2I2D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The chef^ that^ the waiter^ talked about^^ poured^ the flour onto the counter.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I2D0
+
+trial E3I2D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The chef^ that^ the waiter^ distracted^ in the kitchen^ poured^ the flour onto the counter.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I2D0
+
+trial E4I2D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The chef^ that^ the waiter^ talked about^ in the kitchen^ poured^ the flour onto the counter.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I2D0
+
+trial E5I2D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The chef^ that^ distracted^ the waiter^^ poured^ the flour onto the counter.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I2D0
+
+trial E6I2D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The chef^ that^ distracted^ the waiter^ in the kitchen^ poured^ the flour onto the counter.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I2D0
+
+trial E1I3D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The children^ that^ the babysitter^ ignored^^ bothered^ her about a trip to the beach.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I3D0
+
+trial E2I3D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The children^ that^ the babysitter^ yelled at^^ bothered^ her about a trip to the beach.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I3D0
+
+trial E3I3D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The children^ that^ the babysitter^ ignored^ before breakfast^ bothered^ her about a trip to the beach.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I3D0
+
+trial E4I3D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The children^ that^ the babysitter^ yelled at^ before breakfast^ bothered^ her about a trip to the beach.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I3D0
+
+trial E5I3D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The children^ that^ ignored^ the babysitter^^ bothered^ her about a trip to the beach.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I3D0
+
+trial E6I3D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The children^ that^ ignored^ the babysitter^ before breakfast^ bothered^ her about a trip to the beach.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I3D0
+
+trial E1I4D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students^ that^ the teacher^ threatened^^ skipped^ the reading for the week.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I4D0
+
+trial E2I4D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students^ that^ the teacher^ spoke to^^ skipped^ the reading for the week.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I4D0
+
+trial E3I4D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students^ that^ the teacher^ threatened^ after class^ skipped^ the reading for the week.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I4D0
+
+trial E4I4D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students^ that^ the teacher^ spoke to^ after class^ skipped^ the reading for the week.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I4D0
+
+trial E5I4D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students^ that^ threatened^ the teacher^^ skipped^ the reading for the week.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I4D0
+
+trial E6I4D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students^ that^ threatened^ the teacher^ after class^ skipped^ the reading for the week.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I4D0
+
+trial E1I5D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The dancer^ that^ the audience^ loved^^ ignored^ the director's instructions.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I5D0
+
+trial E2I5D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The dancer^ that^ the audience^ chatted about^^ ignored^ the director's instructions.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I5D0
+
+trial E3I5D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The dancer^ that^ the audience^ loved^ at the FAC^ ignored^ the director's instructions.^
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I5D0
+
+trial E4I5D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The dancer^ that^ the audience^ chatted about^ at the FAC^ ignored^ the director's instructions.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I5D0
+
+trial E5I5D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The dancer^ that^ loved^ the audience^^ ignored^ the director's instructions.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I5D0
+
+trial E6I5D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The dancer^ that^ loved^ the audience^ at the FAC^ ignored^ the director's instructions.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I5D0
+
+trial E101I5D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Was the dancer paying attention to the director? \n\nyes             no\n
+  max_display_time =	15000
+  trial_type =		question
+end E101I5D1
+
+trial E1I6D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The employees^ that^ the fireman^ spotted^^ hurried^ across the open field.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I6D0
+
+trial E2I6D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The employees^ that^ the fireman^ shouted to^^ hurried^ across the open field.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I6D0
+
+trial E3I6D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The employees^ that^ the fireman^ spotted^ in the building^ hurried^ across the open field.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I6D0
+
+trial E4I6D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The employees^ that^ the fireman^ shouted to^ in the building^ hurried^ across the open field.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I6D0
+
+trial E5I6D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The employees^ that^ spotted^ the fireman^^ hurried^ across the open field.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I6D0
+
+trial E6I6D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The employees^ that^ spotted^ the fireman^ in the building^ hurried^ across the open field.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I6D0
+
+trial E1I7D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ the customers^ approached^^ lifted^ the chickens from their coop.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I7D0
+
+trial E2I7D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ the customers^ bargained with^^ lifted^ the chickens from their coop.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I7D0
+
+trial E3I7D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ the customers^ approached^ at the market^ lifted^ the chickens from their coop.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I7D0
+
+trial E4I7D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ the customers^ bargained with^ at the market^ lifted^ the chickens from their coop.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I7D0
+
+trial E5I7D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ approached^ the customers^^ lifted^ the chickens from their coop.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I7D0
+
+trial E6I7D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ approached^ the customers^ at the market^ lifted^ the chickens from their coop.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I7D0
+
+trial E1I8D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ the rancher^ hired^^ planted^ the seeds in long rows.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I8D0
+
+trial E2I8D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ the rancher^ worked for^^ planted^ the seeds in long rows.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I8D0
+
+trial E3I8D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ the rancher^ hired^ during the season^ planted^ the seeds in long rows.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I8D0
+
+trial E4I8D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ the rancher^ worked for^ during the season^ planted^ the seeds in long rows.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I8D0
+
+trial E5I8D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ hired^ the rancher^^ planted^ the seeds in long rows.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I8D0
+
+trial E6I8D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The farmer^ that^ hired^ the rancher^ during the season^ planted^ the seeds in long rows.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I8D0
+
+trial E101I8D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Who planted the seeds? \n\nthe rancher           the farmer\n
+  max_display_time =	15000
+  trial_type =		question
+end E101I8D1
+
+trial E1I9D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The fireman^ that^ the residents^ signaled^^ sprayed^ the house with high-powered hoses.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I9D0
+
+trial E2I9D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The fireman^ that^ the residents^ spoke to^^ sprayed^ the house with high-powered hoses.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I9D0
+
+trial E3I9D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The fireman^ that^ the residents^ signaled^ from the street^ sprayed^ the house with high-powered hoses.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I9D0
+
+trial E4I9D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The fireman^ that^ the residents^ spoke to^ from the street^ sprayed^ the house with high-powered hoses.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I9D0
+
+trial E5I9D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The fireman^ that^ signaled^ the residents^^ sprayed^ the house with high-powered hoses.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I9D0
+
+trial E6I9D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The fireman^ that^ signaled^ the residents^ from the street^ sprayed^ the house with high-powered hoses.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I9D0
+
+trial E1I10D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The actor^ that^ the director^ watched^^ forgot^ a critical line.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I10D0
+
+trial E2I10D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The actor^ that^ the director^ listened to^^ forgot^ a critical line.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I10D0
+
+trial E3I10D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The actor^ that^ the director^ watched^ on the set^ forgot^ a critical line.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I10D0
+
+trial E4I10D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The actor^ that^ the director^ listened to^ on the set^ forgot^ a critical line.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I10D0
+
+trial E5I10D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The actor^ that^ watched^ the director^^ forgot^ a critical line.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I10D0
+
+trial E6I10D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The actor^ that^ watched^ the director^ on the set^ forgot^ a critical line.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I10D0
+
+trial E1I11D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigator^ that^ the agency^ phoned^^ suspected^ the new person from accounting.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I11D0
+
+trial E2I11D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigator^ that^ the agency^ called up^^ suspected^ the new person from accounting.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I11D0
+
+trial E3I11D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigator^ that^ the agency^ phoned^ for the job^ suspected^ the new person from accounting.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I11D0
+
+trial E4I11D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigator^ that^ the agency^ called up^ for the job^ suspected^ the new person from accounting.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I11D0
+
+trial E5I11D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigator^ that^ phoned^ the agency^^ suspected^ the new person from accounting.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I11D0
+
+trial E6I11D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigator^ that^ phoned^ the agency^ for the job^ suspected^ the new person from accounting.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I11D0
+
+trial E1I12D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The judge^ that^ the witnesses^ addressed^^ noticed^ the defense attorneys.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I12D0
+
+trial E2I12D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The judge^ that^ the witnesses^ waited for^^ noticed^ the defense attorneys.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I12D0
+
+trial E3I12D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The judge^ that^ the witnesses^ addressed^ on the stand^ noticed^ the defense attorneys.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I12D0
+
+trial E4I12D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The judge^ that^ the witnesses^ waited for^ on the stand^ noticed^ the defense attorneys.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I12D0
+
+trial E5I12D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The judge^ that^ addressed^ the witnesses^^ noticed^ the defense attorneys.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I12D0
+
+trial E6I12D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The judge^ that^ addressed^ the witnesses^ on the stand^ noticed^ the defense attorneys.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I12D0
+
+trial E1I13D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The manager^ that^ the foreman^ visited^^ remembered^ some inconvenient facts.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I13D0
+
+trial E2I13D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The manager^ that^ the foreman^ looked for^^ remembered^ some inconvenient facts.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I13D0
+
+trial E3I13D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The manager^ that^ the foreman^ visited^ in the shop^ remembered^ some inconvenient facts.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I13D0
+
+trial E4I13D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The manager^ that^ the foreman^ looked for^ in the shop^ remembered^ some inconvenient facts.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I13D0
+
+trial E5I13D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The manager^ that^ visited^ the foreman^^ remembered^ some inconvenient facts.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I13D0
+
+trial E6I13D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The manager^ that^ visited^ the foreman^ in the shop^ remembered^ some inconvenient facts.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I13D0
+
+trial E101I13D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What did the manager remember? \n\nsome facts                a visit\n 
+  max_display_time =	15000
+  trial_type =		question
+end E101I13D1
+
+trial E1I14D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mathematician^ that^ the chairman^ admired^^ created^ a solution to the well-known problem.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I14D0
+
+trial E2I14D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mathematician^ that^ the chairman^ read about^^ created^ a solution to the well-known problem.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I14D0
+
+trial E3I14D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mathematician^ that^ the chairman^ admired^ from afar^ created^ a solution to the well-known problem.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I14D0
+
+trial E4I14D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mathematician^ that^ the chairman^ read about^ from afar^ created^ a solution to the well-known problem.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I14D0
+
+trial E5I14D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mathematician^ that^ admired^ the chairman^^ created^ a solution to the well-known problem.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I14D0
+
+trial E6I14D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mathematician^ that^ admired^ the chairman^ from afar^ created^ a solution to the well-known problem.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I14D0
+
+trial E1I15D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The monkeys^ that^ the zookeepers^ watched^^ rattled^ the bars of their cage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I15D0
+
+trial E2I15D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The monkeys^ that^ the zookeepers^ spied on^^ rattled^ the bars of their cage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I15D0
+
+trial E3I15D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The monkeys^ that^ the zookeepers^ watched^ from a distance^ rattled^ the bars of their cage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I15D0
+
+trial E4I15D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The monkeys^ that^ the zookeepers^ spied on^ from a distance^ rattled^ the bars of their cage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I15D0
+
+trial E5I15D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The monkeys^ that^ watched^ the zookeepers^^ rattled^ the bars of their cage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I15D0
+
+trial E6I15D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The monkeys^ that^ watched^ the zookeepers^ from a distance^ rattled^ the bars of their cage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I15D0
+
+trial E101I15D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Did the monkeys get loose? \n\nyes               no\n 
+  max_display_time =	15000
+  trial_type =		question
+end E101I15D1
+
+trial E1I16D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The movie star^ that^ the philanthropists^ invited^^ proposed^ an annual prize.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I16D0
+
+trial E2I16D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The movie star^ that^ the philanthropists^ asked for^^ proposed^ an annual prize.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I16D0
+
+trial E3I16D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The movie star^ that^ the philanthropists^ invited^ during the festival^ proposed^ an annual prize.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I16D0
+
+trial E4I16D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The movie star^ that^ the philanthropists^ asked for^ during the festival^ proposed^ an annual prize.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I16D0
+
+trial E5I16D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The movie star^ that^ invited^ the philanthropists^^ proposed^ an annual prize.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I16D0
+
+trial E6I16D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The movie star^ that^ invited^ the philanthropists^ during the festival^ proposed^ an annual prize.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I16D0
+
+trial E1I17D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ the couple^ observed^^ purchased^ the old Victorian house.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I17D0
+
+trial E2I17D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ the couple^ wondered about^^ purchased^ the old Victorian house.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I17D0
+
+trial E3I17D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ the couple^ observed^ at the park^ purchased^ the old Victorian house.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I17D0
+
+trial E4I17D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ the couple^ wondered about^ at the park^ purchased^ the old Victorian house.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I17D0
+
+trial E5I17D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ observed^ the couple^^ purchased^ the old Victorian house.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I17D0
+
+trial E6I17D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ observed^ the couple^ at the park^ purchased^ the old Victorian house.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I17D0
+
+trial E1I18D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The pilot^ that^ the ground crew^ delayed^^ remained^ on the runway for a long time.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I18D0
+
+trial E2I18D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The pilot^ that^ the ground crew^ talked to^^ remained^ on the runway for a long time.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I18D0
+
+trial E3I18D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The pilot^ that^ the ground crew^ delayed^ for hours^ remained^ on the runway for a long time.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I18D0
+
+trial E4I18D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The pilot^ that^ the ground crew^ talked to^ for hours^ remained^ on the runway for a long time.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I18D0
+
+trial E5I18D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The pilot^ that^ delayed^ the ground crew^^ remained^ on the runway for a long time.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I18D0
+
+trial E6I18D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The pilot^ that^ delayed^ the ground crew^ for hours^ remained^ on the runway for a long time.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I18D0
+
+trial E101I18D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Did the pilot leave quickly? \n\nyes                  no\n 
+  max_display_time =	15000
+  trial_type =		question
+end E101I18D1
+
+trial E1I19D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The soldiers^ that^ the natives^ helped^^ climbed^ the big rock that blocked the path.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I19D0
+
+trial E2I19D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The soldiers^ that^ the natives^ walked behind^^ climbed^ the big rock that blocked the path.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I19D0
+
+trial E3I19D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The soldiers^ that^ the natives^ helped^ in the forest^ climbed^ the big rock that blocked the path.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I19D0
+
+trial E4I19D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The soldiers^ that^ the natives^ walked behind^ in the forest^ climbed^ the big rock that blocked the path.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I19D0♥
+
+trial E5I19D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The soldiers^ that^ helped^ the natives^^ climbed^ the big rock that blocked the path.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I19D0
+
+trial E6I19D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The soldiers^ that^ helped^ the natives^ in the forest^ climbed^ the big rock that blocked the path.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I19D0
+
+trial E1I20D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The speaker^ that^ the economists^ entertained^^ predicted^ a good year for the industry.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I20D0
+
+trial E2I20D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The speaker^ that^ the economists^ heard about^^ predicted^ a good year for the industry.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I20D0
+
+trial E3I20D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The speaker^ that^ the economists^ entertained^ for days^ predicted^ a good year for the industry.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I20D0
+
+trial E4I20D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The speaker^ that^ the economists^ heard about^ for days^ predicted^ a good year for the industry.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I20D0
+
+trial E5I20D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The speaker^ that^ entertained^ the economists^^ predicted^ a good year for the industry.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I20D0
+
+trial E6I20D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The speaker^ that^ entertained^ the economists^ for days^ predicted^ a good year for the industry.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I20D0
+
+trial E1I21D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The executives^ that^ the lawyers^ sued^^ filed^ a grievance with the judge.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I21D0
+
+trial E2I21D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The executives^ that^ the lawyers^ complained about^^ filed^ a grievance with the judge.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I21D0
+
+trial E3I21D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The executives^ that^ the lawyers^ sued^ in court^ filed^ a grievance with the judge.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I21D0
+
+trial E4I21D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The executives^ that^ the lawyers^ complained about^ in court^ filed^ a grievance with the judge.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I21D0
+
+trial E5I21D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The executives^ that^ sued^ the lawyers^^ filed^ a grievance with the judge.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I21D0
+
+trial E6I21D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The executives^ that^ sued^ the lawyers^ in court^ filed^ a grievance with the judge.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I21D0
+
+trial E101I21D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Did the lawyers file a grievance? \n\nyes              no\n 
+  max_display_time =	15000
+  trial_type =		question
+end E101I21D1
+
+trial E1I22D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The trainer^ that^ the jockey^ called^^ rubbed^ the horse's back.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I22D0
+
+trial E2I22D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The trainer^ that^ the jockey^ stopped near^^ rubbed^ the horse's back.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I22D0
+
+trial E3I22D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The trainer^ that^ the jockey^ called^ in the stables^ rubbed^ the horse's back.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I22D0
+
+trial E4I22D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The trainer^ that^ the jockey^ stopped near^ in the stables^ rubbed^ the horse's back.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I22D0
+
+trial E5I22D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The trainer^ that^ called^ the jockey^^ rubbed^ the horse's back.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I22D0
+
+trial E6I22D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The trainer^ that^ called^ the jockey^ in the stables^ rubbed^ the horse's back.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I22D0
+
+trial E1I23D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tennis player^ that^ the coach^ admired^^ defeated^ his greatest rival.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I23D0
+
+trial E2I23D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tennis player^ that^ the coach^ worked with^^ defeated^ his greatest rival.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I23D0
+
+trial E3I23D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tennis player^ that^ the coach^ admired^ for years^ defeated^ his greatest rival.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I23D0
+
+trial E4I23D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tennis player^ that^ the coach^ worked with^ for years^ defeated^ his greatest rival.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I23D0
+
+trial E5I23D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tennis player^ that^ admired^ the coach^^ defeated^ his greatest rival.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I23D0
+
+trial E6I23D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tennis player^ that^ admired^ the coach^ for years^ defeated^ his greatest rival.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I23D0
+
+trial E101I23D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Did the tennis player win? \n\nyes              no\n 
+  max_display_time =	15000
+  trial_type =		question
+end E101I23D1
+
+trial E1I24D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor^ that^ the student^ introduced^^ walked^ across the quad.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I24D0
+
+trial E2I24D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor^ that^ the student^ met with^^ walked^ across the quad.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I24D0
+
+trial E3I24D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor^ that^ the student^ introduced^ at the seminar^ walked^ across the quad.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I24D0
+
+trial E4I24D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor^ that^ the student^ met with^ at the seminar^ walked^ across the quad.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I24D0
+
+trial E5I24D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor^ that^ introduced^ the student^^ walked^ across the quad.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I24D0
+
+trial E6I24D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor^ that^ introduced^ the student^ at the seminar^ walked^ across the quad.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I24D0
+
+trial E1I25D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The bartender^ that^ the drunk^ fought^^ ate some^ nachos for dinner.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I25D0
+
+trial E2I25D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The bartender^ that^ the drunk^ ordered from^^ ate some^ nachos for dinner.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I25D0
+
+trial E3I25D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The bartender^ that^ the drunk^ fought^ at the party^ ate some^ nachos for dinner.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I25D0
+
+trial E4I25D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The bartender^ that^ the drunk^ ordered from^ at the party^ ate some^ nachos for dinner.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I25D0
+
+trial E5I25D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The bartender^ that^ fought^ the drunk^^ ate some^ nachos.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I25D0
+
+trial E6I25D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The bartender^ that^ fought^ the drunk^ at the party^ ate some^ nachos.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I25D0
+
+trial E101I25D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What did the bartender eat? \n\nsome hotdogs                 some nachos\n 
+  max_display_time =	15000
+  trial_type =		question
+end E101I25D1
+
+trial E1I26D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The ballerina^ that^ the murderer^ saved^^ took^ her final bow.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I26D0
+
+trial E2I26D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The ballerina^ that^ the murderer^ sang with^^ took^ her final bow.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I26D0
+
+trial E3I26D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The ballerina^ that^ the murderer^ saved^ on the stage^ took^ her final bow.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I26D0
+
+trial E4I26D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The ballerina^ that^ the murderer^ sang with^ on the stage^ took^ her final bow.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I26D0
+
+trial E5I26D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The ballerina^ that^ saved^ the murderer^^ took^ her final bow.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I26D0
+
+trial E6I26D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The ballerina^ that^ saved^ the murderer^ on the stage^ took^ her final bow.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I26D0
+
+trial E101I26D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What did the ballerina do? \n\ndance an encore                 take a bow\n 
+  max_display_time =	15000
+  trial_type =		question
+end E101I26D1
+
+trial E1I27D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The witch^ that^ the girl^ killed^^ was resurrected^ eventually.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I27D0
+
+trial E2I27D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The witch^ that^ the girl^ battled with^^ was resurrected^ eventually.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I27D0
+
+trial E3I27D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The witch^ that^ the girl^ killed^ in the castle^ was resurrected^ eventually.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I27D0
+
+trial E4I27D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The witch^ that^ the girl^ battled with^ in the castle^ was resurrected^ eventually.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I27D0
+
+trial E5I27D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The witch^ that^ killed^ the girl^^ was resurrected^ eventually.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I27D0
+
+trial E6I27D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The witch^ that^ killed^ the girl^ in the castle^ was resurrected^ eventually.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I27D0
+
+trial E101I27D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Did the witch come back to life? \n\nyes                 no\n 
+  max_display_time =	15000
+  trial_type =		question
+end E101I27D1
+
+trial E1I28D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The graduate student^ that^ the researcher^ helped^^ wrote^ a paper about a new study.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I28D0
+
+trial E2I28D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The graduate student^ that^ the researcher^ worked with^^ wrote^ a paper about a new study.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I28D0
+
+trial E3I28D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The graduate student^ that^ the researcher^ helped^ in the summer^ wrote^ a paper about a new study.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I28D0
+
+trial E4I28D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The graduate student^ that^ the researcher^ worked with^ in the summer^ wrote^ a paper about a new study.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I28D0
+
+trial E5I28D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The graduate student^ that^ helped^ the researcher^^ wrote^ a paper about a new study.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I28D0
+
+trial E6I28D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The graduate student^ that^ helped^ the researcher^ in the summer^ wrote^ a paper about a new study.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I28D0
+
+trial E1I29D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ the patient^ saw^^ thought^ about what was causing the pain.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I29D0
+
+trial E2I29D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ the patient^ met with^^ thought^ about what was causing the pain.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I29D0
+
+trial E3I29D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ the patient^ saw^ in the lobby^ thought^ about what was causing the pain.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I29D0
+
+trial E4I29D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ the patient^ met with^ in the lobby^ thought^ about what was causing the pain.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I29D0
+
+trial E5I29D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ saw^ the patient^^ thought^ about what was causing the pain.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I29D0
+
+trial E6I29D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ saw^ the patient^ in the lobby^ thought^ about what was causing the pain.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I29D0
+
+trial E1I30D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The man^ that^ the woman^ kissed^^ left^ early to go to work.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I30D0
+
+trial E2I30D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The man^ that^ the woman^ lived with^^ left^ early to go to work.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I30D0
+
+trial E3I30D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The man^ that^ the woman^ kissed^ in Chicopee^ left^ early to go to work.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I30D0
+
+trial E4I30D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The man^ that^ the woman^ lived with^ in Chicopee^ left^ early to go to work.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I30D0
+
+trial E5I30D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The man^ that^ kissed^ the woman^^ left^ early to go to work.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I30D0
+
+trial E6I30D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The man^ that^ kissed^ the woman^ in Chicopee^ left^ early to go to work.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I30D0
+
+trial E1I31D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The lady^ that^ the photographer^ filmed^^ walked^ off the movie set.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I31D0
+
+trial E2I31D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The lady^ that^ the photographer^ talked with^^ walked^ off the movie set.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I31D0
+
+trial E3I31D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The lady^ that^ the photographer^ filmed^ after lunch^ walked^ off the movie set.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I31D0
+
+trial E4I31D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The lady^ that^ the photographer^ talked with^ after lunch^ walked^ off the movie set.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I31D0
+
+trial E5I31D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The lady^ that^ filmed^ the photographer^^ walked^ off the movie set.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I31D0
+
+trial E6I31D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The lady^ that^ filmed^ the photographer^ after lunch^ walked^ off the movie set.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I31D0
+
+trial E1I32D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mother^ that^ the child^ stopped^^ asked^ her if she needed help.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I32D0
+
+trial E2I32D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mother^ that^ the child^ spoke with^^ asked^ her if she needed help.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I32D0
+
+trial E3I32D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mother^ that^ the child^ stopped^ on the sidewalk^ asked^ her if she needed help.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I32D0
+
+trial E4I32D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mother^ that^ the child^ spoke with^ on the sidewalk^ asked^ her if she needed help.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I32D0
+
+trial E5I32D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mother^ that^ stopped^ the child^^ asked^ her if she needed help.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I32D0
+
+trial E6I32D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The mother^ that^ stopped^ the child^ on the sidewalk^ asked^ her if she needed help.^\n  
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I32D0
+
+trial E1I33D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The professor^ that^ the students^ ignored^^ continued^ with his lecture.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I33D0
+
+trial E2I33D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The professor^ that^ the students^ talked about^^ continued^ with his lecture.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I33D0
+
+trial E3I33D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The professor^ that^ the students^ ignored^ during the break^ continued^ with his lecture.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I33D0
+
+trial E4I33D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The professor^ that^ the students^ talked about^ during the break^ continued^ with his lecture.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I33D0
+
+trial E5I33D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The professor^ that^ ignored^ the students^^ continued^ with his lecture.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I33D0
+
+trial E6I33D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The professor^ that^ ignored^ the students^ during the break^ continued^ with his lecture.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I33D0
+
+trial E1I34D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ the patients^ disliked^^ decided^ to stop working at the hospital.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I34D0
+
+trial E2I34D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ the patients^ laughed at^^ decided^ to stop working at the hospital.^\n  
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I34D0
+
+trial E3I34D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ the patients^ disliked^ for a long time^ decided^ to stop working at the hospital.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I34D0
+
+trial E4I34D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ the patients^ laughed at^ for a long time^ decided^ to stop working at the hospital.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I34D0
+
+trial E5I34D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ disliked^ the patients^^ decided^ to stop working at the hospital.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I34D0
+
+trial E6I34D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The doctor^ that^ disliked^ the patients^ for a long time^ decided^ to stop working at the hospital.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I34D0
+
+trial E1I35D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ the children^ irritated^^ yelled^ at her husband a lot.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I35D0
+
+trial E2I35D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ the children^ fussed at^^ yelled^ at her husband a lot.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I35D0
+
+trial E3I35D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ the children^ irritated^ during dinner^ yelled^ at her husband a lot.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I35D0
+
+trial E4I35D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ the children^ fussed at^ during dinner^ yelled^ at her husband a lot.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I35D0
+
+trial E5I35D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ irritated^ the children^^ yelled^ at her husband a lot.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I35D0
+
+trial E6I35D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The woman^ that^ irritated^ the children^ during dinner^ yelled^ at her husband a lot.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I35D0
+
+trial E1I36D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The celebrity^ that^ the waiter^ harassed^^ called^ security following the incident.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E1I36D0
+
+trial E2I36D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The celebrity^ that^ the waiter^ complained to^^ called^ security following the incident.^\n  
+  max_display_time =	15000
+  trial_type =		sentence
+end E2I36D0
+
+trial E3I36D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The celebrity^ that^ the waiter^ harassed^ on Friday^ called^ security following the incident.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E3I36D0
+
+trial E4I36D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The celebrity^ that^ the waiter^ complained to^ on Friday^ called^ security following the incident.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E4I36D0
+
+
+trial E5I36D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The celebrity^ that^ harassed^ the waiter^^ called^ security following the incident.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E5I36D0
+
+trial E6I36D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The celebrity^ that^ harassed^ the waiter^ on Friday^ called^ security following the incident.^\n 
+  max_display_time =	15000
+  trial_type =		sentence
+end E6I36D0
+
+trial E7I37D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Who delivered something to our house? ^\n^SPEAKER B:  The man in the truck delivered^ the mail^ to our house^ at the end of the afternoon.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I37D0
+
+trial E8I37D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Who delivered a letter to our house? ^\n^Speaker B:  The man in the truck delivered^ the mail^ to our house^ at the end of the afternoon.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I37D0
+
+trial E7I38D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Who brought something to the picnic? ^\n^Speaker B: I believe Melinda brought^ a steak^ to the picnic^ yesterday.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I38D0
+
+trial E8I38D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Who brought a t-bone to the picnic? ^\n^Speaker B: I believe Melinda brought^ a steak^ to the picnic^ yesterday.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I38D0
+
+trial E7I39D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I can't remember, when did Charles study something? ^\n^Speaker B: I'm told that^ he studied^ math^ last year when^ he was in Amherst.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I39D0
+
+trial E8I39D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I can't remember, when did Charles study mathematics? ^\n^Speaker B: I'm told that^ he studied^ math^ last year when^ he was in Amherst.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I39D0
+
+trial E7I40D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Remind me, when did Sam visit someone? ^\n^Speaker B: I think Sam visited^ the writer^ last year when^ he was traveling in New England.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I40D0
+
+trial E8I40D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Remind me, when did Sam visit the author? ^\n^Speaker B: I think Sam visited^ the writer^ last year when^ he was traveling in New England.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I40D0
+
+trial E7I41D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Bill is uncertain, where did Rose go to get something? ^\n^Speaker B: I'm told she went to Hadley to get^ a dog^ as a present^ for her children.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I41D0
+
+trial E8I41D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Bill is uncertain, where did Rose go to get a collie? ^\n^Speaker B: I'm told she went to Hadley to get^ a dog^ as a present^ for her children.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I41D0
+
+trial E7I42D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I need to know, where did Mary eat something for lunch? ^\n^Speaker B: I'm pretty sure she ate^ pasta^ in the food court^ at the mall.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I42D0
+
+trial E8I42D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I need to know, where did Mary eat spaghetti for lunch? ^\n^Speaker B: I'm pretty sure she ate^ pasta^ in the food court^ at the mall.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I42D0
+
+trial E7I43D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Sam wondered, who went hunting for something? ^\n^Speaker B: I think Chris might have gone hunting for^ fowl^ up north of^ the Quabbin Reservoir.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I43D0
+
+trial E8I43D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Sam wondered, who went hunting for turkey? ^\n^Speaker B: I think Chris might have gone hunting for^ fowl^ up north of^ the Quabbin Reservoir.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I43D0
+
+trial E107I43D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: where did Chris go hunting?\n\nUp above the Quabbin                In the Quabbin
+  max_display_time =	15000
+  trial_type =		question
+end E107I43D1
+
+trial E7I44D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Who listened to something last night? ^\n^Speaker B: I think Miles listened to^ music^ before he went^ to bed last night.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I44D0
+
+trial E8I44D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Who listened to jazz last night? ^\n^Speaker B: I think Miles listened to^ music^ before he went^ to bed last night.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I44D0
+
+trial E7I45D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I forget, when did Bill go into the kitchen for something? ^\n^Speaker B: I believe he went into the kitchen for^ some food^ just a few minutes^ before dinner was served.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I45D0
+
+trial E8I45D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I forget, when did Bill go into the kitchen for a snack? ^\n^Speaker B: I believe he went into the kitchen for^ some food^ just a few minutes^ before dinner was served.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I45D0
+
+trial E107I45D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q:When did he go into the kitchen?\n\nBefore bedtime          Before dinnertime
+  max_display_time =	15000
+  trial_type =		question
+end E107I45D1
+
+trial E7I46D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I'm unsure, when did Julia train something to do tricks? ^\n^Speaker B: I understand she actually trained^ an ape^ to do tricks^ last winter.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I46D0
+
+trial E8I46D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I'm unsure, when did Julia train a gorilla to do tricks? ^\n^Speaker B: I understand she actually trained^ an ape^ to do tricks^ last winter.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I46D0
+
+trial E7I47D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Sam's concerned, where did Ryan get a ride to? ^\n^Speaker B: My understanding is he took^ a taxi^ to his house^ after the evening in the bar.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I47D0
+
+trial E8I47D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Sam's concerned, where did Ryan take a cab to? ^\n^Speaker B: My understanding is he took^ a taxi^ to his house^ after the evening in the bar.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I47D0
+
+trial E107I47D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Did Ryan go to a hotel?\n\n yes                    no
+  max_display_time =	15000
+  trial_type =		question
+end E107I47D1
+
+trial E7I48D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tom asked me, where did Ron ride on something last summer? ^\n^Speaker B: I think he rode on^ a motorcycle^ on Cape Cod^ all of the last summer.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I48D0
+
+trial E8I48D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tom asked me, where did Ron ride on a Harley Davidson last summer? ^\n^Speaker B: I think he rode on^ a motorcycle^ on Cape Cod^ all of the last summer.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I48D0
+
+trial E7I49D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tell me, who drove somewhere to see his friend? ^\n^Speaker B: I think Alex drove to^ the city^ to see his^ friend.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I49D0
+
+trial E8I49D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tell me, who drove to New York to see his friend? ^\n^Speaker B: I think Alex drove to^ the city^ to see his^ friend.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I49D0
+
+trial E107I49D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Did Alex drive into the country?\n\n yes                  no
+  max_display_time =	15000
+  trial_type =		question
+end E107I49D1
+
+trial E7I50D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I was wondering, who had a drink of something? ^\n^Speaker B: I believe Leah had a drink^ of coke^ before running^ off to school.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I50D0
+
+trial E8I50D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I was wondering, who had a drink of coca-cola? ^\n^Speaker B: I believe Leah had a drink^ of coke^ before running^ off to school.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I50D0
+
+trial E7I51D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Ellen is curious, when is Brian hiking somewhere? ^\n^Speaker B: I believe he is hiking to^ the summit^ next Saturday^ or Sunday.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I51D0
+
+trial E8I51D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Ellen is curious, when is Brian hiking to the peak of Mount Tom? ^\n^Speaker B: I believe he is hiking to^ the summit^ next Saturday^ or Sunday.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I51D0
+
+trial E7I52D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: The reporter was wondering, when did the emergency team respond to something? ^\n^Speaker B: I believe they responded to^ a fire^ sometime after^ midnight last night.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I52D0
+
+trial E8I52D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: The reporter was wondering, when did the emergency team respond to something burning down? ^\n^Speaker B: I believe they responded to^ a fire^ sometime after^ midnight last night.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I52D0
+
+trial E107I52D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Was it dark when the firemen fought the fire?\n\n  yes         no
+  max_display_time =	15000
+  trial_type =		question
+end E107I52D1
+
+trial E7I53D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Her mother is curious, where did Ashley eat something? ^\n^Speaker B: I’m pretty sure she ate^ a candy bar^ at the bus stop^ in front of the Newman Center.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I53D0
+
+trial E8I53D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Her mother is curious, where did Ashley eat a Milky Way? ^\n^Speaker B: I’m pretty sure she ate^ a candy bar^ at the bus stop^ in front of the Newman Center.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I53D0
+
+trial E7I54D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tell me, where did Roger play something? ^\n^Speaker B: I understand he played^ the drums^ at the show^ this weekend.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I54D0
+
+trial E8I54D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tell me, where did Roger play the bongos? ^\n^Speaker B: I understand he played^ the drums^ at the show^ this weekend.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I54D0
+
+trial E107I54D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What did Roger play at the show?\n\n the piano            the drums
+  max_display_time =	15000
+  trial_type =		question
+end E107I54D1
+
+trial E7I55D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tom was asking, who took his date somewhere recently? ^\n^Speaker B: I understand Dan took his date to^ a movie^ sometime during^ the past week or two.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I55D0
+
+trial E8I55D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tom was asking, who took his date to a film recently? ^\n^Speaker B: I understand Dan took his date to^ a movie^ sometime during^ the past week or two.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I55D0
+
+trial E107I55D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q:Did Dan go to a movie?\n\n yes                no
+  max_display_time =	15000
+  trial_type =		question
+end E107I55D1
+
+trial E7I56D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I'm really curious, who is going somewhere? ^\n^Speaker B: I believe Charlotte is going on^ a plane^ and she's very^ excited about it.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I56D0
+
+trial E8I56D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: I'm really curious, who is going on a jet tomorrow? ^\n^Speaker B: I believe Charlotte is going on^ a plane^ and she's very^ excited about it.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I56D0
+
+trial E7I57D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tell me, when did Caitlin leave to go somewhere? ^\n^Speaker B: I believe she left to go to^ the doctor^ just a little^ while before 11 this morning.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I57D0
+
+trial E8I57D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Tell me, when did Caitlin leave to go to the cardiologist? ^\n^Speaker B: I believe she left to go to^ the doctor^ just a little^ while before 11 this morning.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I57D0
+
+trial E107I57D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What was Caitlin going to do?\n\n    go to the doctors                   go to the drugstore
+  max_display_time =	15000
+  trial_type =		question
+end E107I57D1
+
+trial E7I58D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A:  When did Mike buy something  yesterday? ^\n^Speaker B: He bought^ a book^ yesterday at the^ Barnes and Noble store in the strip mall.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I58D0
+
+trial E8I58D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A:  When did Mike buy a novel yesterday? ^\n^Speaker B: He bought^ a book^ yesterday at the^ Barnes and Noble store in the strip mall.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I58D0
+
+trial E7I59D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: We were wondering, where did Sarah decide to plant something? ^\n^Speaker B: I believe she decided to plant^ a tree^ just outside her^ dining room window.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I59D0
+
+trial E8I59D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: We were wondering, where did Sarah decide to plant an oak? ^\n^Speaker B: I believe she decided to plant^ a tree^ just outside her^ dining room window.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I59D0
+
+trial E107I59D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What was going to be outside the dining room?\n\na patio                       a tree
+  max_display_time =	15000
+  trial_type =		question
+end E107I59D1
+
+trial E7I60D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Mary asked, where was Ellen when she used the binoculars to see something? ^\n^Speaker B: I understand she used the binoculars to see^ the birds^ when she was on^ vacation in the Berkshires.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E7I60D0
+
+trial E8I60D0
+  gc_rect =		(340 20 410 60)
+  inline =		|SPEAKER A: Mary asked, where was Ellen when she used the binoculars to see the hawks? ^\n^Speaker B: I understand she used the binoculars to see^ the birds^ when she was on^ vacation in the Berkshires.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E8I60D0
+
+trial E9I61D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students agreed that^ it was^ the races^ that^ made them^ decide to leave the city.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I61D0
+
+trial E10I61D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students agreed that^^ the races^^ made them^ decide to leave the city.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I61D0
+
+trial E11I61D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students agreed that^ it was^ the risks^ that^ made them^ decide to leave the city.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I61D0
+
+trial E12I61D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The students agreed that^^ the risks^^ made them^ decide to leave the city.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I61D0
+
+trial E109I61D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Who decided to leave the city?\n\nThe students                     The spectators
+  max_display_time =	15000
+  trial_type =		question
+end E109I61D1
+
+trial E9I62D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor thought that^ it was^ the large fan^ that^ would drive them^ out of the room, not the smell.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I62D0
+
+trial E10I62D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor thought that^^ the large fan^^ would drive them^ out of the room, not the smell.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I62D0
+
+trial E11I62D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor thought that^ it was^ the large rat^ that^ would drive them^ out of the room, not the smell.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I62D0
+
+trial E12I62D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitor thought that^^ the large rat^^ would drive them^ out of the room, not the smell.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I62D0
+
+trial E109I62D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Was the smell going to drive them out of the room?\n\nyes                     no
+  max_display_time =	15000
+  trial_type =		question
+end E109I62D1
+
+trial E9I63D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tired guy thought that^ it was^ another yard^ that^ would be more^ than he could possibly manage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I63D0
+
+trial E10I63D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tired guy thought that^^ another yard^^ would be more^ than he could possibly manage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I63D0
+
+trial E11I63D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tired guy thought that^ it was^ another mile^ that^ would be more^ than he could possibly manage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I63D0
+
+trial E12I63D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tired guy thought that^^ another mile^^ would be more^ than he could possibly manage.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I63D0
+
+trial E109I63D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Was the man pretty much exhausted?\n\nyes                     no     
+  max_display_time =	15000
+  trial_type =		question
+end E109I63D1
+
+trial E9I64D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The businessman declared that^ it was^ the policy^ that^ made the new^ position so attractive.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I64D0
+
+trial E10I64D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The businessman declared that^^ the policy^^ made the new^ position so attractive.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I64D0
+
+trial E11I64D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The businessman declared that^ it was^ the studio^ that^ made the new^ position so attractive.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I64D0
+
+trial E12I64D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The businessman declared that^^ the studio^^ made the new^ position so attractive.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I64D0
+
+trial E109I64D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What did the businessman think was attractive?\n\nThe new secretary                         The new position
+  max_display_time =	15000
+  trial_type =		question
+end E109I64D1
+
+trial E9I65D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The advisor informed us that^ it was^ the band^ that^ was just too^ small for the big event.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I65D0
+
+trial E10I65D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The advisor informed us that^^ the band^^ was just too^ small for the big event.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I65D0
+
+trial E11I65D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The advisor informed us that^ it was^ the hall^ that^ was just too^ small for the big event.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I65D0
+
+trial E12I65D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The advisor informed us that^^ the hall^^ was just too^ small for the big event.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I65D0
+
+trial E109I65D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What kind of event was it?\n\nA casual one                       A big one
+  max_display_time =	15000
+  trial_type =		question
+end E109I65D1
+
+trial E9I66D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The hostess thought that^ it was^ the toast^ that^ would be welcome^ at that^ evening's reception.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I66D0
+
+trial E10I66D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The hostess thought that^^ the toast^^ would be welcome^ at that^ evening's reception.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I66D0
+
+trial E11I66D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The hostess thought that^ it was^ the pizza^ that^ would be welcome^ at that^ evening's reception.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I66D0
+
+trial E12I66D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The hostess thought that^^ the pizza^^ would be welcome^ at that^ evening's reception.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I66D0
+
+trial E109I66D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Who was thinking about the evening reception?\n\nThe hostess                       The host
+  max_display_time =	15000
+  trial_type =		question
+end E109I66D1
+
+trial E9I67D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The young woman knew that^ it was^ the vet^ that^ would get in^ the way of her plans.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I67D0
+
+trial E10I67D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The young woman knew that^^ the vet^^ would get in^ the way of her plans.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I67D0
+
+trial E11I67D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The young woman knew that^ it was^ the owl^ that^ would get in^ the way of her plans.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I67D0
+
+trial E12I67D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The young woman knew that^^ the owl^^ would get in^ the way of her plans.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I67D0
+
+trial E9I68D0
+  gc_rect =		(340 20 410 60)
+  inline =		|My friend was sure that^ it was^ the pot^ that^ would attract^ the most interest and admiration.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I68D0
+
+trial E10I68D0
+  gc_rect =		(340 20 410 60)
+  inline =		|My friend was sure that^^ the pot^^ would attract^ the most interest and admiration.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I68D0
+
+trial E11I68D0
+  gc_rect =		(340 20 410 60)
+  inline =		|My friend was sure that^ it was^ the pie^ that^ would attract^ the most interest and admiration.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I68D0
+
+trial E12I68D0
+  gc_rect =		(340 20 410 60)
+  inline =		|My friend was sure that^^ the pie^^ would attract^ the most interest and admiration.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I68D0
+
+trial E9I69D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Everybody was afraid that^ it was^ the new pitcher^ that^ would fail^ to solve the problems.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I69D0
+
+trial E10I69D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Everybody was afraid that^^ the new pitcher^^ would fail^ to solve the problems.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I69D0
+
+trial E11I69D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Everybody was afraid that^ it was^ the new cologne^ that^ would fail^ to solve the problems.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I69D0
+
+trial E12I69D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Everybody was afraid that^^ the new cologne^^ would fail^ to solve the problems.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I69D0
+
+trial E9I70D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitors thought that^ it was^ the bark^ that^ was going^ to frighten the little kids that^ were with them.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I70D0
+
+trial E10I70D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The visitors thought that^^ the bark^^ was going^ to frighten the little kids that^ were with them.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I70D0
+
+trial E11I70D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The hikers thought that^ it was^ the toad^ that^ was going^ to frighten the little kids that^ were with them.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I70D0
+
+trial E12I70D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The hikers thought that^^ the toad^^ was going^ to frighten the little kids that^ were with them.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I70D0
+
+trial E9I71D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigators discovered that^ it was^ the liner^ that^ was contaminated^ with poisonous chemicals.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I71D0
+
+trial E10I71D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigators discovered that^^ the liner^^ was contaminated^ with poisonous chemicals.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I71D0
+
+trial E11I71D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigators discovered that^ it was^ the wharf^ that^ was contaminated^ with poisonous chemicals.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I71D0
+
+trial E12I71D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The investigators discovered that^^ the wharf^^ was contaminated^ with poisonous chemicals.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I71D0
+
+trial E9I72D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The examination concluded that^ it was^ the calf^ that^ was most urgently^ in need of attention.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I72D0
+
+trial E10I72D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The examination concluded that^^ the calf^^ was most urgently^ in need of attention.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I72D0
+
+trial E11I72D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The examination concluded that^ it was^ the mare^ that^ was most urgently^ in need of attention.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I72D0
+
+trial E12I72D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The examination concluded that^^ the mare^^ was most urgently^ in need of attention.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I72D0
+
+trial E9I73D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The teacher thought that^ it was^ a file^ that^ captured his students'^ attention during the class.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I73D0
+
+trial E10I73D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The teacher thought that^^ a file^^ captured his students'^ attention during the class.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I73D0
+
+trial E11I73D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The teacher thought that^ it was^ a bell^ that^ captured his students'^ attention during the class.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I73D0
+
+trial E12I73D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The teacher thought that^^ a bell^^ captured his students'^ attention during the class.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I73D0
+
+trial E9I74D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tour leader declared that^ it was^ a match^ that^ was needed^ to deal with the trouble they were in.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I74D0
+
+trial E10I74D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tour leader declared that^^ a match^^ was needed^ to deal with the trouble they were in.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I74D0
+
+trial E11I74D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tour leader declared that^ it was^ faith^ that^ was needed^ to deal with the trouble they were in.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I74D0
+
+trial E12I74D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The tour leader declared that^^ faith^^ was needed^ to deal with the trouble they were in.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I74D0
+
+trial E9I75D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The director figured that^ it was^ a seal^ that^ was needed^ to complete the installation.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I75D0
+
+trial E10I75D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The director figured that^^ a seal^^ was needed^ to complete the installation.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I75D0
+
+trial E11I75D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The director figured that^ it was^ a lion^ that^ was needed^ to complete the installation.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I75D0
+
+trial E12I75D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The director figured that^^ a lion^^ was needed^ to complete the installation.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I75D0
+
+trial E9I76D0
+  gc_rect =		(340 20 410 60)
+  inline =		|My mother said that^ it was^ my gum^ that^ needed some^ serious attention.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E9I76D0
+
+trial E10I76D0
+  gc_rect =		(340 20 410 60)
+  inline =		|My mother said that^^ my gum^^ needed some^ serious attention.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E10I76D0
+
+trial E11I76D0
+  gc_rect =		(340 20 410 60)
+  inline =		|My mother said that^ it was^ my tub^ that^ needed some^ serious attention.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E11I76D0
+
+trial E12I76D0
+  gc_rect =		(340 20 410 60)
+  inline =		|My mother said that^^ my tub^^ needed some^ serious attention.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E12I76D0
+
+trial E13I77D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Carol realized it was^ the compound^ that^ was big enough to house^ them in the country.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I77D0
+
+trial E14I77D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Carol realized^ the compound^^ was big enough to house^ them in the country.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I77D0
+
+trial E113I77D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Where were they going to stay?\n\nIn a compound                    In a hotel
+  max_display_time =	15000
+  trial_type =		question
+end E113I77D1
+
+trial E15I77D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Carol realized it was^ the compound^ that^ cleaned the sink^ but stunk up the house really terribly.^ \n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I77D0
+
+trial E16I77D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Carol realized^ the compound^^ cleaned the sink^ but stunk up the house really terribly.^ \n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I77D0
+
+trial E115I77D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What was stinking up the house?\n\nA compound                       An animal
+  max_display_time =	15000
+  trial_type =		question
+end E115I77D1
+
+trial E13I78D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Jason knew it was^ the scrap^ that^ would get him expelled from school^ even though he didn't usually fight.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I78D0
+
+trial E14I78D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Jason knew^ the scrap^^ would get him expelled from school^ even though he didn't usually fight.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I78D0
+
+trial E113I78D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Who was going to get expelled from school?\n\nJeremy                                Jason
+  max_display_time =	15000
+  trial_type =		question
+end E113I78D1
+
+trial E15I78D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Jason knew it was^ the scrap^ that^ would go to the dog^ under the table when it was time for it to be fed.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I78D0
+
+trial E16I78D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Jason knew^ the scrap^^ would go to the dog^ under the table when it was time for it to be fed.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I78D0
+
+trial E115I78D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Who was going to get the scrap?\n\nThe cat                                The dog
+  max_display_time =	15000
+  trial_type =		question
+end E115I78D1
+
+trial E13I79D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Mel suspected it was^ the palm^ that^ nurtured the natives^ and kept them healthy with coconut milk.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I79D0
+
+trial E14I79D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Mel suspected^ the palm^^ nurtured the natives^ and kept them healthy with coconut milk.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I79D0
+
+trial E113I79D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Did the natives drink coconut milk?\n\nYes                                              No
+  max_display_time =	15000
+  trial_type =		question
+end E113I79D1
+
+trial E15I79D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Mel suspected it was^ the palm^ that^ revealed the secrets^ of a person’s intimate life and destiny.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I79D0
+
+trial E16I79D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Mel suspected^ the palm^^ revealed the secrets^ of a person’s intimate life and destiny.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I79D0
+
+trial E115I79D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Did Melinda think that^ a palm shows a person’s secrets?\n\nYes                                              No
+  max_display_time =	15000
+  trial_type =		question
+end E115I79D1
+
+trial E13I80D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Mike said it was^ the pupil^ that^ was upsetting the classroom^ in the elementary school.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I80D0
+
+trial E14I80D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Mike said^ the pupil^^ was upsetting the classroom^ in the elementary school.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I80D0
+
+trial E113I80D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Who was getting upset?\n\nA student                               A classroom
+  max_display_time =	15000
+  trial_type =		question
+end E113I80D1
+
+trial E15I80D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Mike said it was^ the pupil^ that^ was permanently damaged by the bright light^ from the laser.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I80D0
+
+trial E16I80D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Mike said^ the pupil^^ was permanently damaged by the bright light^ from the laser.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I80D0
+
+trial E115I80D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What was getting damaged?\n\nA laser                                   An eye
+  max_display_time =	15000
+  trial_type =		question
+end E115I80D1
+
+trial E13I81D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The child knew it was^ the cricket^ that^ would keep her father glued to the tv^ for days and days on end.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I81D0
+
+trial E14I81D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The child knew^ the cricket^^ would keep her father glued to the tv^ for days and days on end.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I81D0
+
+trial E113I81D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Was the child’s father watching sports on TV?\n\nYes                                              No
+  max_display_time =	15000
+  trial_type =		question
+end E113I81D1
+
+trial E15I81D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The child knew it was^ the cricket^ that^ would keep her father awake chirping all night,^ disrupting his sleep.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I81D0
+
+trial E16I81D0
+  gc_rect =		(340 20 410 60)
+  inline =		|The child knew^ the cricket^^ would keep her father awake chirping all night,^ disrupting his sleep.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I81D0
+
+trial E115I81D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Was the girl’s father having trouble sleeping?\n\nYes                                              No
+  max_display_time =	15000
+  trial_type =		question
+end E115I81D1
+
+trial E13I82D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Gordon hypothesized that^ it was^ the cape^ that^ would be developed into lots^ that^ would sell for millions.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I82D0
+
+trial E14I82D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Gordon hypothesized that^ the cape^^ would be developed into lots^ that^ would sell for millions.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I82D0
+
+trial E113I82D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What was getting developed\n\nSome real estate                                 Some film
+  max_display_time =	15000
+  trial_type =		question
+end E113I82D1
+
+trial E15I82D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Gordon hypothesized that^ it was^ the cape^ that^ would be worn^ by the movie star at the award ceremony.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I82D0
+
+trial E16I82D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Gordon hypothesized that^ the cape^^ would be worn^ by the movie star at the award ceremony.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I82D0
+
+trial E115I82D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Who was wearing the cape?\n\nAn actress                             A millionaire
+  max_display_time =	15000
+  trial_type =		question
+end E115I82D1
+
+trial E13I83D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Andrew said it was^ the net^ that^ astounded him even after expenses and taxes^ were taken out of the gross income.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I83D0
+
+trial E14I83D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Andrew said^ the net^^ astounded him even after expenses and taxes^ were taken out of the gross income.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I83D0
+
+trial E113I83D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Was Andrew surprised about the earnings?\n\nYes                                                         No
+  max_display_time =	15000
+  trial_type =		question
+end E113I83D1
+
+trial E15I83D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Andrew said it was^ the net^ that^ astounded him when he looked down from the trapeze^ in the circus tent.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I83D0
+
+trial E16I83D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Andrew said^ the net^^ astounded him when he looked down from the trapeze^ in the circus tent.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I83D0
+
+trial E115I83D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: Was Andrew in the stands, watching the circus?\n\nYes                             No
+  max_display_time =	15000
+  trial_type =		question
+end E115I83D1
+
+trial E13I84D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Susie noticed that^ it was^ the poker^ that^ seemed to frighten the school children^ in the strictly-run classroom.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I84D0
+
+trial E14I84D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Susie noticed that^ the poker^^ seemed to frighten the school children^ in the strictly-run classroom.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I84D0
+
+trial E113I84D1
+  button =		leftTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What kind of classroom was it?\n\nA repressive one                      A progressive one
+  max_display_time =	15000
+  trial_type =		question
+end E113I84D1
+
+trial E15I84D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Susie noticed that^ it was^ the poker^ that^ seemed to attract the most card players^ to the glitzy casino.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I84D0
+
+trial E16I84D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Susie noticed that^ the poker^^ seemed to attract the most card players^ to the glitzy casino.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I84D0
+
+trial E115I84D1
+  button =		rightTrigger
+  gc_rect =		(340 20 410 60)
+  inline =		|Q: What kind of casino was it?\n\nA shabby one                             A fancy
+  max_display_time =	15000
+  trial_type =		question
+end E115I84D1
+
+trial E13I85D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Evelyn knew it was^ the log^ that^ had been calculated by the statistician^ to satisfy his mathematical critics.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I85D0
+
+trial E14I85D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Evelyn knew^ the log^^ had been calculated by the statistician^ to satisfy his mathematical critics.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I85D0
+
+trial E15I85D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Evelyn knew it was^ the log^ that^ had been chopped by the woodsmen^ to fuel her wood stove.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I85D0
+
+trial E16I85D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Evelyn knew^ the log^^ had been chopped by the woodsmen^ to fuel her wood stove.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I85D0
+
+trial E13I86D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Jennie thought it was^ the staple^ that^ would feed the refugees^ in the most economical fashion.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I86D0
+
+trial E14I86D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Jennie thought^ the staple^^ would feed the refugees^ in the most economical fashion.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I86D0
+
+trial E15I86D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Jennie thought it was^ the staple^ that^ would hold the papers together^ most effectively.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I86D0
+
+trial E16I86D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Jennie thought^ the staple^^ would hold the papers together^ most effectively.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I86D0
+
+trial E13I87D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Kyle said it was^ the crab^ that^ complained about everything^ in the Linguistics Department at UMass.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I87D0
+
+trial E14I87D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Kyle said^ the crab^^ complained about everything^ in the Linguistics Department at UMass.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I87D0
+
+trial E15I87D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Kyle said it was^ the crab^ that^ added flavor to the stew^ that^ the UMass Dining Commons served.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I87D0
+
+trial E16I87D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Kyle said^ the crab^^ added flavor to the stew^ that^ the UMass Dining Commons served.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I87D0
+
+trial E13I88D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Ken thought it was^ the brush^ that^ hid the child who wandered off^ into the woods after dinner.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I88D0
+
+trial E14I88D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Ken thought^ the brush^^ hid the child who wandered off^ into the woods after dinner.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I88D0
+
+trial E15I88D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Ken thought it was^ the brush^ that^ held the hair that^ came off the cat^ when it started shedding.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I88D0
+
+trial E16I88D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Ken thought^ the brush^^ held the hair that^ came off the cat^ when it started shedding.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I88D0
+
+trial E13I89D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Lou thought it was^ the mush^ that^ covered the walk after the snowstorm^ and got into the house.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I89D0
+
+trial E14I89D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Lou thought^ the mush^^ covered the walk after the snowstorm^ and got into the house. ^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I89D0
+
+trial E15I89D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Lou thought it was^ the mush^ that^ tasted really bad when her parents made her eat it^ for breakfast.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I89D0
+
+trial E16I89D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Lou thought^ the mush^^ tasted really bad when her parents made her eat it^ for breakfast.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I89D0
+
+trial E13I90D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Janis knew it was^ the lock^ that^ fell out of the barrette^ and into the food at dinner.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I90D0
+
+trial E14I90D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Janis knew^ the lock^^ fell out of the barrette^ and into the food at dinner.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I90D0
+
+trial E15I90D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Janis knew it was^ the lock^ that^ got smashed open by the hammer^ when the guy hit it.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I90D0
+
+trial E16I90D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Janis knew^ the lock^^ got smashed open by the hammer^ when the guy hit it.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I90D0
+
+trial E13I91D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Ken knew it was^ the pen^ that^ needed to hold the pigs^ until they could be slaughtered.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I91D0
+
+trial E14I91D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Ken knew^ the pen^^ needed to hold the pigs^ until they could be slaughtered.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I91D0
+
+trial E15I91D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Ken knew it was^ the pen^ that^ needed to be refilled with ink^ if it was to last through the meeting.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I91D0
+
+trial E16I91D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Ken knew^ the pen^^ needed to be refilled with^ ink if it was to last through the meeting.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I91D0
+
+trial E13I92D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Dora said it was^ a pod^ that^ surfaced near the whale-watching boat,^ delighting spectators.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I92D0
+
+trial E14I92D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Dora said^ a pod^^ surfaced near the whale-watching boat,^ delighting spectators.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I92D0
+
+trial E15I92D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Dora said it was^ a pod^ that^ blew in through the open window,^ delighting the children.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I92D0
+
+trial E16I92D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Dora said^ a pod^^ blew in through the open window,^ delighting the children.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I92D0
+
+trial E13I93D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Stan thought it was^ a ray^ that^ swam into the sunken ship^ that^ the divers were searching through.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I93D0
+
+trial E14I93D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Stan thought^ a ray^^ swam into the sunken ship^ that^ the divers were searching through.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I93D0
+
+trial E15I93D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Stan thought it was^ a ray^ that^ lit up the treasure from above^ when the divers searched underwater.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I93D0
+
+trial E16I93D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Stan thought^ a ray^^ lit up the treasure from above^ when the divers searched underwater.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I93D0
+
+trial E13I94D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Karen maintained it was^ the chord^ that^ bisected the circle^ even though the geometry teacher didn’t think so.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I94D0
+
+trial E14I94D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Karen maintained^ the chord^^ bisected the circle^ even though the geometry teacher didn’t think so.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I94D0
+
+trial E15I94D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Karen maintained it was^ the chord^ that^ sounded like the organ^ was broken even though it had been repaired.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I94D0
+
+trial E16I94D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Karen maintained^ the chord^^ sounded like the organ^ was broken even though it had been repaired.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I94D0
+
+trial E13I95D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Paul remarked that^ it was^ the sash^ that^ was warped and kept the window^ from opening all the way.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I95D0
+
+trial E14I95D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Paul remarked that^ the sash^^ was warped and kept the window^ from opening all the way.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I95D0
+
+trial E15I95D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Paul remarked that^ it was^ the sash^ that^ made the dress look dowdy^ when the seamstress sewed it on.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I95D0
+
+trial E16I95D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Paul remarked that^ the sash^^ made the dress look dowdy^ when the seamstress sewed it on.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I95D0
+
+trial E13I96D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Glen told us that^ it was^ the vice^ that^ held the wooden board^ in the workshop .^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I96D0
+
+trial E14I96D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Glen told us that^ the vice^^ held the wooden board^ in the workshop.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I96D0
+
+trial E15I96D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Glen told us that^ it was^ the vice^^ in the city^ that^ bothered^ the major the most.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I96D0
+
+trial E16I96D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Glen told us that^ the vice^^ in the city^ bothered^ the major the most.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I96D0
+
+trial E13I97D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Gloria said that^ it was^ the page^ that^ obeyed the congressman^ whenever he was called.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I97D0
+
+trial E14I97D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Gloria said that^ the page^^ obeyed the congressman^ whenever he was called.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I97D0
+
+trial E15I97D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Gloria said that^ it was^ the page^ that^ contained the assembly instructions^ for the new toy.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I97D0
+
+trial E16I97D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Gloria said that^ the page^^ contained the assembly instructions^ for the new toy.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I97D0
+
+trial E13I98D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Donna realized it was^ the bank^ that^ needed to be climbed over^ to see the river.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I98D0
+
+trial E14I98D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Donna realized^ the bank^^ needed to be climbed over^ to see the river.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I98D0
+
+trial E15I98D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Donna realized it was^ the bank^ that^ needed to give her a loan^ for her business.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I98D0
+
+trial E16I98D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Donna realized^ the bank^^ needed to give her a loan^ for her business.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I98D0
+
+trial E13I99D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Anita said it was^ the dresser^ that^ got the actress ready to go on stage^ on time every evening.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I99D0
+
+trial E14I99D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Anita said^ the dresser^^ got the actress ready to go on stage^ on time every evening.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I99D0
+
+trial E15I99D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Anita said it was^ the dresser^ that^ interested the people at the antique fair^ in Noho last summer.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I99D0
+
+trial E16I99D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Anita said^ the dresser^^ interested the people at the antique fair^ in Noho last summer.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I99D0
+
+trial E13I100D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Charlotte said it was^ the tee^ that^ shrank in the dryer^ when Mom tried to wash it.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E13I100D0
+
+trial E14I100D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Charlotte said^ the tee^^ shrank in the dryer^ when Mom tried to wash it.^\n
+  max_display_time =	15000
+  trial_type =		sentence
+end E14I100D0
+
+trial E15I100D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Charlotte said it was^ the tee^ that^ broke during the golf game^ at the local country club.^
+  max_display_time =	15000
+  trial_type =		sentence
+end E15I100D0
+
+trial E16I100D0
+  gc_rect =		(340 20 410 60)
+  inline =		|Charlotte said^ the tee^^ broke during the golf game^ at the local country club.^
+  max_display_time =	15000
+  trial_type =		sentence
+end E16I100D0
+
+
+sequence SE1I1
+  E1I1D0
+  E101I1D1
+end SE1I1
+
+sequence SE2I1
+  E2I1D0
+  E101I1D1
+end SE2I1
+
+sequence SE3I1
+  E3I1D0
+  E101I1D1
+end SE3I1
+
+sequence SE4I1
+  E4I1D0
+  E101I1D1
+end SE4I1
+
+sequence SE5I1
+  E5I1D0
+  E101I1D1
+end SE5I1
+
+sequence SE6I1
+  E6I1D0
+  E101I1D1
+end SE6I1
+
+sequence SE1I5
+  E1I5D0
+  E101I5D1
+end SE1I5
+
+sequence SE2I5
+  E2I5D0
+  E101I5D1
+end SE2I5
+
+sequence SE3I5
+  E3I5D0
+  E101I5D1
+end SE3I5
+
+sequence SE4I5
+  E4I5D0
+  E101I5D1
+end SE4I5
+
+sequence SE5I5
+  E5I5D0
+  E101I5D1
+end SE5I5
+
+sequence SE6I5
+  E6I5D0
+  E101I5D1
+end SE6I5
+
+sequence SE1I8
+  E1I8D0
+  E101I8D1
+end SE1I8
+
+sequence SE2I8
+  E2I8D0
+  E101I8D1
+end SE2I8
+
+sequence SE3I8
+  E3I8D0
+  E101I8D1
+end SE3I8
+
+sequence SE4I8
+  E4I8D0
+  E101I8D1
+end SE4I8
+
+sequence SE5I8
+  E5I8D0
+  E101I8D1
+end SE5I8
+
+sequence SE6I8
+  E6I8D0
+  E101I8D1
+end SE6I8
+
+sequence SE1I13
+  E1I13D0
+  E101I13D1
+end SE1I13
+
+sequence SE2I13
+  E2I13D0
+  E101I13D1
+end SE2I13
+
+sequence SE3I13
+  E3I13D0
+  E101I13D1
+end SE3I13
+
+sequence SE4I13
+  E4I13D0
+  E101I13D1
+end SE4I13
+
+sequence SE5I13
+  E5I13D0
+  E101I13D1
+end SE5I13
+
+sequence SE6I13
+  E6I13D0
+  E101I13D1
+end SE6I13
+
+sequence SE1I15
+  E1I15D0
+  E101I15D1
+end SE1I15
+
+sequence SE2I15
+  E2I15D0
+  E101I15D1
+end SE2I15
+
+sequence SE3I15
+  E3I15D0
+  E101I15D1
+end SE3I15
+
+sequence SE4I15
+  E4I15D0
+  E101I15D1
+end SE4I15
+
+sequence SE5I15
+  E5I15D0
+  E101I15D1
+end SE5I15
+
+sequence SE6I15
+  E6I15D0
+  E101I15D1
+end SE6I15
+
+sequence SE1I18
+  E1I18D0
+  E101I18D1
+end SE1I18
+
+sequence SE2I18
+  E2I18D0
+  E101I18D1
+end SE2I18
+
+sequence SE3I18
+  E3I18D0
+  E101I18D1
+end SE3I18
+
+sequence SE4I18
+  E4I18D0
+  E101I18D1
+end SE4I18
+
+sequence SE5I18
+  E5I18D0
+  E101I18D1
+end SE5I18
+
+sequence SE6I18
+  E6I18D0
+  E101I18D1
+end SE6I18
+
+sequence SE1I21
+  E1I21D0
+  E101I21D1
+end SE1I21
+
+sequence SE2I21
+  E2I21D0
+  E101I21D1
+end SE2I21
+
+sequence SE3I21
+  E3I21D0
+  E101I21D1
+end SE3I21
+
+sequence SE4I21
+  E4I21D0
+  E101I21D1
+end SE4I21
+
+sequence SE5I21
+  E5I21D0
+  E101I21D1
+end SE5I21
+
+sequence SE6I21
+  E6I21D0
+  E101I21D1
+end SE6I21
+
+sequence SE1I23
+  E1I23D0
+  E101I23D1
+end SE1I23
+
+sequence SE2I23
+  E2I23D0
+  E101I23D1
+end SE2I23
+
+sequence SE3I23
+  E3I23D0
+  E101I23D1
+end SE3I23
+
+sequence SE4I23
+  E4I23D0
+  E101I23D1
+end SE4I23
+
+sequence SE5I23
+  E5I23D0
+  E101I23D1
+end SE5I23
+
+sequence SE6I23
+  E6I23D0
+  E101I23D1
+end SE6I23
+
+sequence SE1I25
+  E1I25D0
+  E101I25D1
+end SE1I25
+
+sequence SE2I25
+  E2I25D0
+  E101I25D1
+end SE2I25
+
+sequence SE3I25
+  E3I25D0
+  E101I25D1
+end SE3I25
+
+sequence SE4I25
+  E4I25D0
+  E101I25D1
+end SE4I25
+
+sequence SE5I25
+  E5I25D0
+  E101I25D1
+end SE5I25
+
+sequence SE6I25
+  E6I25D0
+  E101I25D1
+end SE6I25
+
+sequence SE1I26
+  E1I26D0
+  E101I26D1
+end SE1I26
+
+sequence SE2I26
+  E2I26D0
+  E101I26D1
+end SE2I26
+
+sequence SE3I26
+  E3I26D0
+  E101I26D1
+end SE3I26
+
+sequence SE4I26
+  E4I26D0
+  E101I26D1
+end SE4I26
+
+sequence SE5I26
+  E5I26D0
+  E101I26D1
+end SE5I26
+
+sequence SE6I26
+  E6I26D0
+  E101I26D1
+end SE6I26
+
+sequence SE1I27
+  E1I27D0
+  E101I27D1
+end SE1I27
+
+sequence SE2I27
+  E2I27D0
+  E101I27D1
+end SE2I27
+
+sequence SE3I27
+  E3I27D0
+  E101I27D1
+end SE3I27
+
+sequence SE4I27
+  E4I27D0
+  E101I27D1
+end SE4I27
+
+sequence SE5I27
+  E5I27D0
+  E101I27D1
+end SE5I27
+
+sequence SE6I27
+  E6I27D0
+  E101I27D1
+end SE6I27
+
+sequence SE7I43
+  E7I43D0
+  E107I43D1
+end SE7I43
+
+sequence SE8I43
+  E8I43D0
+  E107I43D1
+end SE8I43
+
+sequence SE7I45
+  E7I45D0
+  E107I45D1
+end SE7I45
+
+sequence SE8I45
+  E8I45D0
+  E107I45D1
+end SE8I45
+
+sequence SE7I47
+  E7I47D0
+  E107I47D1
+end SE7I47
+
+sequence SE8I47
+  E8I47D0
+  E107I47D1
+end SE8I47
+
+sequence SE7I49
+  E7I49D0
+  E107I49D1
+end SE7I49
+
+sequence SE8I49
+  E8I49D0
+  E107I49D1
+end SE8I49
+
+sequence SE7I52
+  E7I52D0
+  E107I52D1
+end SE7I52
+
+sequence SE8I52
+  E8I52D0
+  E107I52D1
+end SE8I52
+
+sequence SE7I54
+  E7I54D0
+  E107I54D1
+end SE7I54
+
+sequence SE8I54
+  E8I54D0
+  E107I54D1
+end SE8I54
+
+sequence SE7I55
+  E7I55D0
+  E107I55D1
+end SE7I55
+
+sequence SE8I55
+  E8I55D0
+  E107I55D1
+end SE8I55
+
+sequence SE7I57
+  E7I57D0
+  E107I57D1
+end SE7I57
+
+sequence SE8I57
+  E8I57D0
+  E107I57D1
+end SE8I57
+
+sequence SE7I59
+  E7I59D0
+  E107I59D1
+end SE7I59
+
+sequence SE8I59
+  E8I59D0
+  E107I59D1
+end SE8I59
+
+sequence SE9I61
+  E9I61D0
+  E109I61D1
+end SE9I61
+
+sequence SE10I61
+  E10I61D0
+  E109I61D1
+end SE10I61
+
+sequence SE11I61
+  E11I61D0
+  E109I61D1
+end SE11I61
+
+sequence SE12I61
+  E12I61D0
+  E109I61D1
+end SE12I61
+
+sequence SE9I62
+  E9I62D0
+  E109I62D1
+end SE9I62
+
+sequence SE10I62
+  E10I62D0
+  E109I62D1
+end SE10I62
+
+sequence SE11I62
+  E11I62D0
+  E109I62D1
+end SE11I62
+
+sequence SE12I62
+  E12I62D0
+  E109I62D1
+end SE12I62
+
+sequence SE9I63
+  E9I63D0
+  E109I63D1
+end SE9I63
+
+sequence SE10I63
+  E10I63D0
+  E109I63D1
+end SE10I63
+
+sequence SE11I63
+  E11I63D0
+  E109I63D1
+end SE11I63
+
+sequence SE12I63
+  E12I63D0
+  E109I63D1
+end SE12I63
+
+sequence SE9I64
+  E9I64D0
+  E109I64D1
+end SE9I64
+
+sequence SE10I64
+  E10I64D0
+  E109I64D1
+end SE10I64
+
+sequence SE11I64
+  E11I64D0
+  E109I64D1
+end SE11I64
+
+sequence SE12I64
+  E12I64D0
+  E109I64D1
+end SE12I64
+
+sequence SE9I65
+  E9I65D0
+  E109I65D1
+end SE9I65
+
+sequence SE10I65
+  E10I65D0
+  E109I65D1
+end SE10I65
+
+sequence SE11I65
+  E11I65D0
+  E109I65D1
+end SE11I65
+
+sequence SE12I65
+  E12I65D0
+  E109I65D1
+end SE12I65
+
+sequence SE9I66
+  E9I66D0
+  E109I66D1
+end SE9I66
+
+sequence SE10I66
+  E10I66D0
+  E109I66D1
+end SE10I66
+
+sequence SE11I66
+  E11I66D0
+  E109I66D1
+end SE11I66
+
+sequence SE12I66
+  E12I66D0
+  E109I66D1
+end SE12I66
+
+sequence SE13I77
+  E13I77D0
+  E113I77D1
+end SE13I77
+
+sequence SE14I77
+  E14I77D0
+  E113I77D1
+end SE14I77
+
+sequence SE15I77
+  E15I77D0
+  E115I77D1
+end SE15I77
+
+sequence SE16I77
+  E16I77D0
+  E115I77D1
+end SE16I77
+
+sequence SE13I78
+  E13I78D0
+  E113I78D1
+end SE13I78
+
+sequence SE14I78
+  E14I78D0
+  E113I78D1
+end SE14I78
+
+sequence SE15I78
+  E15I78D0
+  E115I78D1
+end SE15I78
+
+sequence SE16I78
+  E16I78D0
+  E115I78D1
+end SE16I78
+
+sequence SE13I79
+  E13I79D0
+  E113I79D1
+end SE13I79
+
+sequence SE14I79
+  E14I79D0
+  E113I79D1
+end SE14I79
+
+sequence SE15I79
+  E15I79D0
+  E115I79D1
+end SE15I79
+
+sequence SE16I79
+  E16I79D0
+  E115I79D1
+end SE16I79
+
+sequence SE13I80
+  E13I80D0
+  E113I80D1
+end SE13I80
+
+sequence SE14I80
+  E14I80D0
+  E113I80D1
+end SE14I80
+
+sequence SE15I80
+  E15I80D0
+  E115I80D1
+end SE15I80
+
+sequence SE16I80
+  E16I80D0
+  E115I80D1
+end SE16I80
+
+sequence SE13I81
+  E13I81D0
+  E113I81D1
+end SE13I81
+
+sequence SE14I81
+  E14I81D0
+  E113I81D1
+end SE14I81
+
+sequence SE15I81
+  E15I81D0
+  E115I81D1
+end SE15I81
+
+sequence SE16I81
+  E16I81D0
+  E115I81D1
+end SE16I81
+
+sequence SE13I82
+  E13I82D0
+  E113I82D1
+end SE13I82
+
+sequence SE14I82
+  E14I82D0
+  E113I82D1
+end SE14I82
+
+sequence SE15I82
+  E15I82D0
+  E115I82D1
+end SE15I82
+
+sequence SE16I82
+  E16I82D0
+  E115I82D1
+end SE16I82
+
+sequence SE13I83
+  E13I83D0
+  E113I83D1
+end SE13I83
+
+sequence SE14I83
+  E14I83D0
+  E113I83D1
+end SE14I83
+
+sequence SE15I83
+  E15I83D0
+  E115I83D1
+end SE15I83
+
+sequence SE16I83
+  E16I83D0
+  E115I83D1
+end SE16I83
+
+sequence SE13I84
+  E13I84D0
+  E113I84D1
+end SE13I84
+
+sequence SE14I84
+  E14I84D0
+  E113I84D1
+end SE14I84
+
+sequence SE15I84
+  E15I84D0
+  E115I84D1
+end SE15I84
+
+sequence SE16I84
+  E16I84D0
+  E115I84D1
+end SE16I84
+
+sequence SP99I900
+  P99I900D0
+  E104I900D1
+end SP99I900
+
+sequence SP99I905
+  P99I905D0
+  E104I905D1
+end SP99I905
+
+sequence SP99I906
+  P99I906D0
+  E104I906D1
+end SP99I906
+
+sequence SP99I907
+  P99I907D0
+  E104I907D1
+end SP99I907
