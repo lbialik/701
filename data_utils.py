@@ -14,6 +14,8 @@ exp_2_overview = exp_2_path + "/E2.txt"
 exp_1_condition_map = {'11': 'ORC', '12': 'ORC', '13': 'SRC', '14': 'SRC'}
 exp_2_condition_map = {'1': 'ORC', '2': 'ORC', '3': 'ORC', '4': 'ORC', '5': 'SRC', '6': 'SRC'}
 
+ignore_items = ['25', '36']
+
 measurement_types = ["ff", "fp", "gp", "tt"]
 
 def exp_condition_map(exp_number):
@@ -39,20 +41,21 @@ def extract_item_and_condition_from_trial(line, exp_number):
 def extract_sentences(exp_number):
     sentences = defaultdict(lambda: defaultdict(lambda: []))
     file = exp_1_overview if exp_number == 1 else exp_2_overview
+    def is_item_valid(item):
+        return len(item) > 0 and item not in ignore_items
+
     with open(file) as f:
         lines = f.readlines()
         for line in lines:
             if "trial E" in line and "D0" in line:
                 item, condition, valid = extract_item_and_condition_from_trial(line, exp_number)
                 condition_valid = valid
-            item_valid = len(item) > 0
+            item_valid = is_item_valid(item)
             if "inline" in line and condition_valid and item_valid:
                 sentence = parse_sentence(line)
                 sentences[item][condition] = sentence
             if "end" in line and condition_valid and item_valid:
                 condition, item = "", ""
-    # pprint(sentences)
-    # print(f'{len(sentences)} total items')
     return sentences
 
 def parse_measurement_file(m_file):
@@ -75,11 +78,26 @@ def extract_measurements(exp_number):
         measurements[measurement] = parse_measurement_file(m_file)
     return measurements
 
+def same_sentence(sentence1, sentence2):
+    regions1 = sentence1.split('^')
+    regions2 = sentence2.split('^')
+    # ignore all differences after R4
+    if regions1[:5] == regions2[:5]:
+        return True
+    return False
+
+def map_sentence(sentence, unique_sentences):
+    for other_sentence in unique_sentences:
+        if same_sentence(sentence, other_sentence):
+            return other_sentence
+    return sentence
+
 def process_data():
     data = {
-        'ORC': defaultdict(lambda: []), 
-        'SRC': defaultdict(lambda: [])
+        'ORC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: []))), 
+        'SRC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: [])))
         }
+    unique_sentences = []
     for exp_number in [1, 2]:
         sentences = extract_sentences(exp_number)
         measurements = extract_measurements(exp_number)
@@ -87,49 +105,56 @@ def process_data():
         for item in sentences:
             for condition in sentences[item]:
                 general_condition = condition_map[condition]
-                element = {}
                 sentence = sentences[item][condition]
-                # if sentence in [e["sentence"] for e in data[general_condition][item]]:
-                #     print('sentence already included')
-                #     print(sentence) 
-                #     print(item, condition)
-                element['sentence'] = sentence
+                sentence = map_sentence(sentence, unique_sentences)
+                if sentence not in unique_sentences:
+                    unique_sentences.append(sentence)
                 for measurement in measurement_types:
-                    element[measurement] = measurements[measurement][(item, condition)]
-                data[general_condition][item].append(element)
+                    data[general_condition][item][sentence][measurement] += measurements[measurement][(item, condition)]
     return data
 
 def average_data(data):
     avg_data = {
-        'ORC': defaultdict(lambda: []), 
-        'SRC': defaultdict(lambda: [])
+        'ORC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda:  int))), 
+        'SRC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: int)))
         }
+    def avg(values):
+        return np.round(np.mean(values, 0), decimals = 3).tolist()
     for condition in data:
         for item in data[condition]:
-            for element in data[condition][item]:
-                for measure in measurement_types:
-                    element[measure] = np.round(np.mean(element[measure], 0), decimals = 3).tolist()
-                avg_data[condition][item].append(element)
+            for sentence in data[condition][item]:
+                sentence_measurements = data[condition][item][sentence]
+                for measure in sentence_measurements:
+                    avg_data[condition][item][sentence][measure] = avg(sentence_measurements[measure])
     return avg_data
 
 data = process_data()
 avg_data = average_data(data)
-# pprint(avg_data)
 
-sentences = []
-count = 0
-for condition in avg_data:
-        for item in avg_data[condition]:
-            for element in avg_data[condition][item]:
-                if element['sentence'] not in sentences:
-                    sentences.append(element['sentence'])
-                count+=1
-print(f'{len(sentences)} unique sentences, {count} sentences total')
+# for condition in avg_data:
+#     print('condition: ', condition)
+#     for item in avg_data[condition]:
+#         print('item: ', item)
+#         for sentence in avg_data[condition][item]:
+#             print('sentence: ', sentence)
+#             # for measure in avg_data[condition][item][sentence]:
+#             #     print('measure: ', measure, ' = ', avg_data[condition][item][sentence][measure])
+#         print()
 
-exp_1_sentences = extract_sentences(1)
-exp_2_sentences = extract_sentences(2)
-print(len([exp_1_sentences[item][condition] for item in exp_1_sentences for condition in exp_1_sentences[item]]))
-print(len([exp_2_sentences[item][condition] for item in exp_2_sentences for condition in exp_2_sentences[item]]))
+# sentences = []
+# count = 0
+# for condition in avg_data:
+#         for item in avg_data[condition]:
+#             for sentence_element in avg_data[condition][item]:
+#                 if sentence_element['sentence'] not in sentences:
+#                     sentences.append(sentence_element['sentence'])
+#                 count+=1
+# print(f'{len(sentences)} unique sentences, {count} sentences total')
+
+# exp_1_sentences = extract_sentences(1)
+# exp_2_sentences = extract_sentences(2)
+# print(len([exp_1_sentences[item][condition] for item in exp_1_sentences for condition in exp_1_sentences[item]]))
+# print(len([exp_2_sentences[item][condition] for item in exp_2_sentences for condition in exp_2_sentences[item]]))
 
 
 
@@ -181,12 +206,12 @@ print(len([exp_2_sentences[item][condition] for item in exp_2_sentences for cond
 #     print('condition = ', condition)
 #     for item in data[condition]:
 #         print('item = ', item)
-#         for element in data[condition][item]:
-#             print('sentence = ', element['sentence'])
-            # print(len(element['ff']))
-            # print(len(element['fp']))
-            # print(len(element['gp']))
-            # print(len(element['tt']))
+#         for sentence_element in data[condition][item]:
+#             print('sentence = ', sentence_element['sentence'])
+            # print(len(sentence_element['ff']))
+            # print(len(sentence_element['fp']))
+            # print(len(sentence_element['gp']))
+            # print(len(sentence_element['tt']))
 
 
 # def load_sentences(data):
