@@ -128,8 +128,8 @@ def average_data(data):
                     avg_data[condition][item][sentence][measure] = avg(sentence_measurements[measure])
     return avg_data
 
-data = process_data()
-avg_data = average_data(data)
+# data = process_data()
+# avg_data = average_data(data)
 
 # for condition in avg_data:
 #     print('condition: ', condition)
@@ -137,8 +137,8 @@ avg_data = average_data(data)
 #         print('item: ', item)
 #         for sentence in avg_data[condition][item]:
 #             print('sentence: ', sentence)
-#             # for measure in avg_data[condition][item][sentence]:
-#             #     print('measure: ', measure, ' = ', avg_data[condition][item][sentence][measure])
+#             for measure in avg_data[condition][item][sentence]:
+#                 print('measure: ', measure, ' = ', avg_data[condition][item][sentence][measure])
 #         print()
 
 # sentences = []
@@ -155,84 +155,3 @@ avg_data = average_data(data)
 # exp_2_sentences = extract_sentences(2)
 # print(len([exp_1_sentences[item][condition] for item in exp_1_sentences for condition in exp_1_sentences[item]]))
 # print(len([exp_2_sentences[item][condition] for item in exp_2_sentences for condition in exp_2_sentences[item]]))
-
-
-
-
-## Code to be deleted
-
-# exp_1_sentences = extract_sentences(1)
-# exp_2_sentences = extract_sentences(2)
-# for item in exp_1_sentences:
-#     ## vanilla ORC
-#     one = exp_1_sentences[item]['11']
-#     two = exp_2_sentences[item]['1']
-#     if one != two:
-#         print('item ', item)
-#         print('vanilla ORC doesn\'t match')
-#         print("exp 1 sentence = ", one)
-#         print("exp 2 sentence = ", two)
-#         print()
-#     ## ORC + adv
-#     one = exp_1_sentences[item]['12']
-#     two = exp_2_sentences[item]['3']
-#     if one != two:
-#         print('item ', item)
-#         print('ORC + adv doesn\'t match')
-#         print("exp 1 sentence = ", one)
-#         print("exp 2 sentence = ", two)
-#         print()
-#     ## vanilla SRC
-#     one = exp_1_sentences[item]['13']
-#     two = exp_2_sentences[item]['5']
-#     if one != two:
-#         print('item ', item)
-#         print('SRC doesn\'t match')
-#         print("exp 1 sentence = ", one)
-#         print("exp 2 sentence = ", two)
-#         print()
-#     ## SRC + adv
-#     one = exp_1_sentences[item]['14']
-#     two = exp_2_sentences[item]['6']
-#     if one != two:
-#         print('item ', item)
-#         print('SRC + adv doesn\'t match')
-#         print("exp 1 sentence = ", one)
-#         print("exp 2 sentence = ", two)
-#         print()
-
-
-# for condition in data:
-#     print('condition = ', condition)
-#     for item in data[condition]:
-#         print('item = ', item)
-#         for sentence_element in data[condition][item]:
-#             print('sentence = ', sentence_element['sentence'])
-            # print(len(sentence_element['ff']))
-            # print(len(sentence_element['fp']))
-            # print(len(sentence_element['gp']))
-            # print(len(sentence_element['tt']))
-
-
-# def load_sentences(data):
-#     '''Takes a JSON object as input and returns a dictionary e.g. {'1': 'ORC': 'sentence'}'''
-#     sentences = {}
-#     for sentence_number in data:
-#         sentences[sentence_number] = {}
-#         s = data[sentence_number]
-
-#         orc = s["subject"] + s["clausal noun"] + s["clausal verb"] + s["verb phrase"] + "."
-#         orc_adv = s["subject"] + s["clausal noun"] + s["clausal verb"] + s["clausal adverb"] + s["verb phrase"] + "."
-#         orc_clausal_verb = s["subject"] + s["clausal noun"] + s["clausal phrasal verb"] + s["verb phrase"] + "."
-#         orc_clausal_verb_adv = s["subject"] + s["clausal noun"] + s["clausal phrasal verb"] + s["clausal adverb"] + s["verb phrase"] + "."
-#         src = s["subject"] + s["clausal verb"] + s["clausal noun"] + s["verb phrase"] + "."
-#         src_adv = s["subject"] + s["clausal verb"] + s["clausal noun"] + s["clausal adverb"] + s["verb phrase"] + "."
-
-#         sentences[sentence_number]['ORC'] = orc
-#         sentences[sentence_number]['ORC adv'] = orc_adv
-#         sentences[sentence_number]['ORC clausal verb'] = orc_clausal_verb
-#         sentences[sentence_number]['ORC clausal verb adverb'] = orc_clausal_verb_adv
-#         sentences[sentence_number]['SRC'] = src
-#         sentences[sentence_number]['SRC adverb'] = src_adv
-
-#     return sentences
