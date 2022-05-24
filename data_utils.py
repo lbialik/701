@@ -66,7 +66,7 @@ def parse_measurement_file(m_file):
             line = line.replace('\n', '')
             _,_,item,condition,r1,r2,r3,r4,r5,r6,r7,r8 = line.split(',')
             if int(condition) > 0:
-                times = [int(time) if len(time)>0 else -1 for time in [r1,r2,r3,r4,r5,r6,r7,r8]]
+                times = [int(time) if len(time) > 0 else np.nan for time in [r1,r2,r3,r4,r5,r6,r7,r8]]
                 measurements[(item, condition)].append(times)
     return measurements
 
@@ -113,13 +113,14 @@ def process_data():
                     data[general_condition][item][sentence][measurement] += measurements[measurement][(item, condition)]
     return data
 
+def avg(values):
+    return np.round(np.nanmean(values, 0), decimals = 3).tolist()
+
 def average_data(data):
     avg_data = {
         'ORC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda:  int))), 
         'SRC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: int)))
         }
-    def avg(values):
-        return np.round(np.mean(values, 0), decimals = 3).tolist()
     for condition in data:
         for item in data[condition]:
             for sentence in data[condition][item]:
@@ -128,8 +129,54 @@ def average_data(data):
                     avg_data[condition][item][sentence][measure] = avg(sentence_measurements[measure])
     return avg_data
 
+def super_average_data(data):
+    avg_data = {
+        'ORC': defaultdict(lambda: defaultdict(lambda: int)), 
+        'SRC': defaultdict(lambda: defaultdict(lambda: int))
+        }
+    for condition in data:
+        for item in data[condition]:
+            avg_measures = defaultdict(lambda: [])
+            example_sentence = [key for key in data[condition][item].keys()][0]
+            for sentence in data[condition][item]:
+                sentence_measurements = data[condition][item][sentence]
+                for measure in sentence_measurements:
+                    avg_measures[measure].append((avg(sentence_measurements[measure])))
+            avg_data[condition][item]['measurements'] = {}
+            for measurement in avg_measures:
+                avg_data[condition][item]['measurements'][measurement] = avg(avg_measures[measurement])
+            avg_data[condition][item]['example_sentence'] = example_sentence
+    return avg_data
+
 # data = process_data()
 # avg_data = average_data(data)
+# super_avg_data = super_average_data(data)
+
+def NP_region(sentence_type):
+    if sentence_type == "ORC":
+        return 2
+    elif sentence_type == "SRC":
+        return 3
+    else:
+        raise Exception("no such sentence type")
+
+def verb_region(sentence_type):
+    if sentence_type == "ORC":
+        return 3
+    elif sentence_type == "SRC":
+        return 2
+    else:
+        raise Exception("no such sentence type")
+
+def split_sentence_on(sentence, index):
+    split_sentence = sentence.split('^')
+    beginning, middle, end = ''.join(split_sentence[:index]).strip(), split_sentence[index].strip(), ''.join(split_sentence[index+1:]).strip()
+    return beginning, middle, end
+
+
+
+
+## Example Usage:
 
 # for condition in avg_data:
 #     print('condition: ', condition)
