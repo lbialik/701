@@ -6,34 +6,28 @@ from data_utils import *
 import numpy as np
 import copy
 import torch
-import transformers
+# import transformers
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 
 data = super_average_data(process_data())
 
-def score(model, tokens_tensor):
-    loss=model(tokens_tensor, labels=tokens_tensor)[0]
-    return np.exp(loss.cpu().detach().numpy())
+# def score(model, tokens_tensor):
+#     loss=model(tokens_tensor, labels=tokens_tensor)[0]
+#     return np.exp(loss.cpu().detach().numpy())
 
-def normalize(idx, next_token_logits):
-    print(next_token_logits.shape)
-    print(next_token_logits[0][idx])
-    print(len([i for i in next_token_logits[0] if i < 0]))
-    print(torch.sum(next_token_logits))
-    # return next_token_logits[idx]/torch.sum(next_token_logits)
-    return 1
+def prob_of_word_norm(idx, next_token_logits):
+    return next_token_logits[0][idx]/torch.sum(next_token_logits)
 
-def prob_of_words_norm(words, next_token_logit_list):
+def prob_of_words_norm(word_idxs, next_token_logit_list):
     num = 0
     denom = 0
-    print(words)
+    print(word_idxs)
     print(next_token_logit_list)
-    assert(len(words) == next_token_logit_list.shape()[0])
-    for i, word in enumerate(words):
-        num += score
-        denom += np.sum(next_token_logit_list[i])
+    assert(len(word_idxs) == next_token_logit_list.shape()[0])
+    for i, word_idx in enumerate(word_idxs):
+        num += next_token_logit_list[i][0][word_idx]
+        denom += torch.sum(next_token_logit_list[i])
     return num/denom
-
 
 def run_gpt(intro, query):
     print(f'\ninput: {intro} [{query}]')
@@ -54,9 +48,16 @@ def run_gpt(intro, query):
         next_token_logits = outputs[0][:, -1, :]
         pred_id = torch.argmax(next_token_logits).item()
         pred_word = tokenizer.decode(pred_id)
-        print(f"Sequence so far: {' '.join([tokenizer.decode(token) for token in tokenized_intro])}")
-        print(f"Predicted next word for sequence: {pred_word}")
-        print('next token prob = ', normalize(pred_id, next_token_logits.detach()))
+        sanity_check = 0
+        for word_idx in next_token_logits[0]:
+            print(word_idx)
+            print(next_token_logits.shape)
+            sanity_check += prob_of_word_norm(word_idx, next_token_logits)
+        print(sanity_check)
+        # print(f"Sequence so far: {' '.join([tokenizer.decode(token) for token in tokenized_intro])}")
+        # print(f"Predicted next word for sequence: {pred_word}")
+        # print('prediction prob = ', prob_of_word_norm(pred_id, next_token_logits.detach()))
+        # print(f'real next token prob = ', prob_of_word_norm(query_token, next_token_logits.detach()))
         tokenized_intro = torch.tensor(np.array([np.append(tokenized_intro, query_token)]))
         
     return 1
