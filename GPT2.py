@@ -36,28 +36,18 @@ def run_gpt(intro, query):
     model.eval()
     tokenized_intro = tokenizer.encode(intro, return_tensors="pt")
     tokenized_query = tokenizer.encode(' ' + query, return_tensors="pt")
-    # print('tokenized intro: ', tokenized_intro)
-    # print('tokenized query: ', tokenized_query)
     query_pred_idxs = []
     query_next_token_logits = []
     for query_token in tokenized_query[0]:
-        # print('query token: ', query_token)
-        # print('intro shape = ', tokenized_intro.shape)
-        # print('query shape = ', query_token.shape)
+        print(f"Sequence so far: {' '.join([tokenizer.decode(token) for token in tokenized_intro])}")
         outputs = model(tokenized_intro)
         next_token_logits = outputs[0][:, -1, :]
         pred_id = torch.argmax(next_token_logits).item()
         pred_word = tokenizer.decode(pred_id)
-        sanity_check = 0
-        for word_idx in next_token_logits[0]:
-            print(word_idx)
-            print(next_token_logits.shape)
-            sanity_check += prob_of_word_norm(word_idx, next_token_logits)
-        print(sanity_check)
-        # print(f"Sequence so far: {' '.join([tokenizer.decode(token) for token in tokenized_intro])}")
-        # print(f"Predicted next word for sequence: {pred_word}")
-        # print('prediction prob = ', prob_of_word_norm(pred_id, next_token_logits.detach()))
-        # print(f'real next token prob = ', prob_of_word_norm(query_token, next_token_logits.detach()))
+        print(f'argmax = {pred_id} --> {pred_word}')
+        print('prediction prob = ', prob_of_word_norm(pred_id, next_token_logits.detach()))
+        print('real = ', query_token)
+        print(f'real next token prob = ', prob_of_word_norm(query_token, next_token_logits.detach()))
         tokenized_intro = torch.tensor(np.array([np.append(tokenized_intro, query_token)]))
         
     return 1
@@ -73,6 +63,8 @@ def add_LM_measures(lang_model):
             v_beginning, v_middle, v_end = split_sentence_on(sentence, verb_region(condition))
             new_data[condition][item]['measurements'][lang_model+'_NP'] = run_gpt(np_beginning, np_middle)
             new_data[condition][item]['measurements'][lang_model+'_verb'] = run_gpt(v_beginning, v_middle)
+            break
+        break
     return new_data
 
 data = add_LM_measures('GPT2')
