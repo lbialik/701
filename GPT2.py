@@ -1,33 +1,14 @@
-from calendar import c
-from lib2to3.pgen2.tokenize import TokenError
 from pprint import pprint
-import token
-from data_utils import *
 import numpy as np
 import copy
 import torch
 # import transformers
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 
+from utils.data_utils import *
+from utils.gpt_utils import *
+
 data = super_average_data(process_data())
-
-# def score(model, tokens_tensor):
-#     loss=model(tokens_tensor, labels=tokens_tensor)[0]
-#     return np.exp(loss.cpu().detach().numpy())
-
-def prob_of_word_norm(idx, next_token_logits):
-    return next_token_logits[0][idx]/torch.sum(next_token_logits)
-
-def prob_of_words_norm(word_idxs, next_token_logit_list):
-    num = 0
-    denom = 0
-    print(word_idxs)
-    print(next_token_logit_list)
-    assert(len(word_idxs) == next_token_logit_list.shape()[0])
-    for i, word_idx in enumerate(word_idxs):
-        num += next_token_logit_list[i][0][word_idx]
-        denom += torch.sum(next_token_logit_list[i])
-    return num/denom
 
 def run_gpt(intro, query):
     print(f'\ninput: {intro} [{query}]')
@@ -36,21 +17,40 @@ def run_gpt(intro, query):
     model.eval()
     tokenized_intro = tokenizer.encode(intro, return_tensors="pt")
     tokenized_query = tokenizer.encode(' ' + query, return_tensors="pt")
-    query_pred_idxs = []
     query_next_token_logits = []
-    for query_token in tokenized_query[0]:
-        print(f"Sequence so far: {' '.join([tokenizer.decode(token) for token in tokenized_intro])}")
-        outputs = model(tokenized_intro)
-        next_token_logits = outputs[0][:, -1, :]
-        pred_id = torch.argmax(next_token_logits).item()
-        pred_word = tokenizer.decode(pred_id)
-        print(f'argmax = {pred_id} --> {pred_word}')
-        print('prediction prob = ', prob_of_word_norm(pred_id, next_token_logits.detach()))
-        print('real = ', query_token)
-        print(f'real next token prob = ', prob_of_word_norm(query_token, next_token_logits.detach()))
-        tokenized_intro = torch.tensor(np.array([np.append(tokenized_intro, query_token)]))
-        
-    return 1
+
+    import itertools
+    sanity_check = 0
+    new_intro = tokenized_intro
+    outputs = model(new_intro)
+    print(outputs[0][:, -1, :].shape[1])
+    all_token_tuples = itertools.permutations(range(outputs[0][:, -1, :].shape[1]), 1)
+    # print('all token tuples: ', [i for i in all_token_tuples])
+    for token_tuple in all_token_tuples:
+        new_intro = tokenized_intro
+        query_next_token_logits = []
+        for query_token in token_tuple:
+            print(f"\nSequence so far: {' '.join([tokenizer.decode(token) for token in new_intro])}")
+            outputs = model(new_intro)
+            next_token_logits = outputs[0][:, -1, :]
+            # query_token_surprise = surprisal_of_word_norm(query_token, next_token_logits.detach())
+            query_next_token_logits.append(next_token_logits.detach())
+            new_intro = torch.tensor(np.array([np.append(new_intro, query_token)]))
+        print(token_tuple, tokenizer.decode(token_tuple[0]), query_next_token_logits)
+        print(surprisal_of_words_norm(token_tuple, query_next_token_logits))
+        sanity_check += surprisal_of_words_norm(token_tuple, query_next_token_logits)
+    print('sanity check should be 1: ', sanity_check)
+
+    # for query_token in tokenized_query[0]:
+    #     print(f"\nSequence so far: {' '.join([tokenizer.decode(token) for token in tokenized_intro])}")
+    #     outputs = model(tokenized_intro)
+    #     next_token_logits = outputs[0][:, -1, :]
+    #     # query_token_surprise = surprisal_of_word_norm(query_token, next_token_logits.detach())
+    #     query_next_token_logits.append(next_token_logits.detach())
+    #     tokenized_intro = torch.tensor(np.array([np.append(tokenized_intro, query_token)]))
+    # query_surprise = surprisal_of_words_norm(tokenized_query[0], query_next_token_logits)
+    # print('query suprise: ', query_surprise)
+    # return query_surprise
 
 def add_LM_measures(lang_model):
     new_data = copy.deepcopy(data)
@@ -68,5 +68,4 @@ def add_LM_measures(lang_model):
     return new_data
 
 data = add_LM_measures('GPT2')
-data = add_LM_measures('LSTM')
 # pprint(data)
