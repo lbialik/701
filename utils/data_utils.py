@@ -147,7 +147,7 @@ def average_data(data):
     for condition in data:
         for item in data[condition]:
             for sentence in data[condition][item]:
-                print(sentence)
+                # print(sentence)
                 sentence_measurements = data[condition][item][sentence]
                 for measure in sentence_measurements:
                     avg_measurements = avg(sentence_measurements[measure])
