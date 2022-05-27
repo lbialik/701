@@ -5,7 +5,9 @@ import torch
 #     return np.exp(loss.cpu().detach().numpy())
 
 def surprisal_of_word_norm(idx, next_token_logits):
-    return next_token_logits[0][idx]/torch.sum(next_token_logits)
+    num = next_token_logits[0][idx]
+    denom = torch.sum(next_token_logits)
+    return float(num/denom)
 
 def surprisal_of_words_norm(word_idxs, next_token_logit_list):
     num = 0

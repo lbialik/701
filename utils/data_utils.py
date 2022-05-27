@@ -1,4 +1,5 @@
 from ast import parse
+from concurrent.futures import process
 import json
 import re 
 from collections import defaultdict
@@ -17,6 +18,28 @@ exp_2_condition_map = {'1': 'ORC', '2': 'ORC', '3': 'ORC', '4': 'ORC', '5': 'SRC
 ignore_items = ['25', '36']
 
 measurement_types = ["ff", "fp", "gp", "tt"]
+
+
+def NP_region(sentence_type):
+    if sentence_type == "ORC":
+        return 2
+    elif sentence_type == "SRC":
+        return 3
+    else:
+        raise Exception("no such sentence type")
+
+def verb_region(sentence_type):
+    if sentence_type == "ORC":
+        return 3
+    elif sentence_type == "SRC":
+        return 2
+    else:
+        raise Exception("no such sentence type")
+
+def split_sentence_on(sentence, index):
+    split_sentence = sentence.split('^')
+    beginning, middle, end = ''.join(split_sentence[:index]).strip(), split_sentence[index].strip(), ''.join(split_sentence[index+1:]).strip()
+    return beginning, middle, end
 
 def exp_condition_map(exp_number):
     return exp_1_condition_map if exp_number == 1 else exp_2_condition_map
@@ -110,7 +133,7 @@ def process_data():
                 if sentence not in unique_sentences:
                     unique_sentences.append(sentence)
                 for measurement in measurement_types:
-                    data[general_condition][item][sentence][measurement] += measurements[measurement][(item, condition)]
+                    data[general_condition][item][sentence][measurement] = measurements[measurement][(item, condition)]
     return data
 
 def avg(values):
@@ -118,15 +141,20 @@ def avg(values):
 
 def average_data(data):
     avg_data = {
-        'ORC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda:  int))), 
-        'SRC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: int)))
+        'ORC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: int)))), 
+        'SRC': defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: int))))
         }
     for condition in data:
         for item in data[condition]:
             for sentence in data[condition][item]:
+                print(sentence)
                 sentence_measurements = data[condition][item][sentence]
                 for measure in sentence_measurements:
-                    avg_data[condition][item][sentence][measure] = avg(sentence_measurements[measure])
+                    avg_measurements = avg(sentence_measurements[measure])
+                    NP_measure = NP_region(condition)
+                    verb_measure = verb_region(condition)
+                    avg_data[condition][item][sentence]["NP"][measure] = avg_measurements[NP_measure]
+                    avg_data[condition][item][sentence]["verb"][measure] = avg_measurements[verb_measure]
     return avg_data
 
 def super_average_data(data):
@@ -142,36 +170,19 @@ def super_average_data(data):
                 sentence_measurements = data[condition][item][sentence]
                 for measure in sentence_measurements:
                     avg_measures[measure].append((avg(sentence_measurements[measure])))
-            avg_data[condition][item]['measurements'] = {}
-            for measurement in avg_measures:
-                avg_data[condition][item]['measurements'][measurement] = avg(avg_measures[measurement])
+            avg_data[condition][item]['NP'] = {}
+            avg_data[condition][item]['verb'] = {}
             avg_data[condition][item]['example_sentence'] = example_sentence
+            for measurement in avg_measures:
+                NP_measure = avg(avg_measures[measurement])[NP_region(condition)]
+                verb_measure = avg(avg_measures[measurement])[verb_region(condition)]
+                avg_data[condition][item]['NP'][measurement] = NP_measure
+                avg_data[condition][item]['verb'][measurement] = verb_measure
     return avg_data
 
 # data = process_data()
 # avg_data = average_data(data)
 # super_avg_data = super_average_data(data)
-
-def NP_region(sentence_type):
-    if sentence_type == "ORC":
-        return 2
-    elif sentence_type == "SRC":
-        return 3
-    else:
-        raise Exception("no such sentence type")
-
-def verb_region(sentence_type):
-    if sentence_type == "ORC":
-        return 3
-    elif sentence_type == "SRC":
-        return 2
-    else:
-        raise Exception("no such sentence type")
-
-def split_sentence_on(sentence, index):
-    split_sentence = sentence.split('^')
-    beginning, middle, end = ''.join(split_sentence[:index]).strip(), split_sentence[index].strip(), ''.join(split_sentence[index+1:]).strip()
-    return beginning, middle, end
 
 
 
