@@ -2,32 +2,24 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json 
 
-def ORC_minus_SRC():
-    differences = {}
-    for condition in data:
-        # print('condition: ', condition)
-        for item in data[condition]:
-            # print('item: ', item)
-            sentence = data[condition][item]['example_sentence']
-            np_beginning, np_middle, np_end = split_sentence_on(sentence, NP_region(condition))
-            v_beginning, v_middle, v_end = split_sentence_on(sentence, verb_region(condition))
-            new_data[condition][item]['NP']['GPT2'] = run_model(np_beginning, np_middle)
-            new_data[condition][item]['verb']['GPT2'] = run_model(v_beginning, v_middle)
-
-
-def plot_bar_graph(labels, measurements, men_means, women_means):
+def plot_bar_graph(labels, title, measurements, men_means, women_means):
 
     x = np.arange(len(labels))  # the label locations
-    width = 0.35  # the width of the bars
+    width = 0.15  # the width of the bars
 
     fig, ax = plt.subplots()
-    ax.bar(x - width/4, men_means, width, label='Men')
-    ax.bar(x - width/2, women_means, width, label='Women')
+    ax.bar(x - width*2, men_means, width, label=measurements[0])
+    ax.bar(x - width, women_means, width, label=measurements[1])
+    ax.bar(x, women_means, width, label=measurements[2])
+    ax.bar(x + width, women_means, width, label=measurements[3])
+    ax.bar(x + width*2, women_means, width, label=measurements[4])
+
+    
 
     # Add some text for labels, title and custom x-axis tick labels, etc.
-    ax.set_xlabel('X label')
-    ax.set_ylabel('Y label')
-    ax.set_title('Title')
+    ax.set_xlabel('Item')
+    ax.set_ylabel('Reading Times')
+    ax.set_title(title)
     # ax.set_xticks(x, labels)
     ax.legend()
     plt.xticks(np.arange(len(labels)), labels)
@@ -39,11 +31,12 @@ def plot_bar_graph(labels, measurements, men_means, women_means):
 
     plt.show()
 
+title = "SRC - ORC (NP)"
 labels = ['The bus driver \n that [the kids]', 'sentence 2', 'sentence 3', 'sentence 4', 'sentence 5']
 men_means = [20, 34, 30, 35, 27]
 women_means = [25, 32, 34, 20, 25]
-measurements = []
-plot_bar_graph(labels, measurements, men_means, women_means)
+measurements = ['ff', 'fp', 'gp', 'tt', 'GPT2']
+plot_bar_graph(labels, title, measurements, men_means, women_means)
 
 
 def plot_box_and_whisker(labels, data, title, save_location=None):
