@@ -14,29 +14,21 @@ def plot_bar_graph(labels, title, measurements, men_means, women_means):
     ax.bar(x + width, women_means, width, label=measurements[3])
     ax.bar(x + width*2, women_means, width, label=measurements[4])
 
-    
-
-    # Add some text for labels, title and custom x-axis tick labels, etc.
     ax.set_xlabel('Item')
     ax.set_ylabel('Reading Times')
     ax.set_title(title)
-    # ax.set_xticks(x, labels)
     ax.legend()
     plt.xticks(np.arange(len(labels)), labels)
-
-    # ax.bar_label(rects1, padding=3)
-    # ax.bar_label(rects2, padding=3)
-
     fig.tight_layout()
-
     plt.show()
 
-title = "SRC - ORC (NP)"
-labels = ['The bus driver \n that [the kids]', 'sentence 2', 'sentence 3', 'sentence 4', 'sentence 5']
-men_means = [20, 34, 30, 35, 27]
-women_means = [25, 32, 34, 20, 25]
-measurements = ['ff', 'fp', 'gp', 'tt', 'GPT2']
-plot_bar_graph(labels, title, measurements, men_means, women_means)
+def print_bar_graph(segment_type):
+    title = "SRC - ORC ({segment_type})"
+    labels = ['The bus driver \n that [the kids]', 'sentence 2', 'sentence 3', 'sentence 4', 'sentence 5']
+    men_means = [20, 34, 30, 35, 27]
+    women_means = [25, 32, 34, 20, 25]
+    measurements = ['ff', 'fp', 'gp', 'tt', 'GPT2']
+    plot_bar_graph(labels, title, measurements, men_means, women_means)
 
 
 def plot_box_and_whisker(labels, data, title, save_location=None):
@@ -63,3 +55,4 @@ def print_box_and_whisker(segment_type):
 
 # print_box_and_whisker("NP")
 # print_box_and_whisker("verb")
+print(print_bar_graph("NP"))
