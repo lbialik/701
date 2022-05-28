@@ -16,7 +16,8 @@ def surprisal_of_words_norm(word_idxs, next_token_logit_list):
     for i, word_idx in enumerate(word_idxs):
         num += next_token_logit_list[i][0][word_idx]
         denom += torch.sum(next_token_logit_list[i])
-    return float(num/denom)
+    # return float(num/denom)
+    return float(num/len(word_idxs))
 
 def print_top_x_predictions(next_token_logits, tokenizer):
     for word_idx, val in sorted(enumerate(next_token_logits[0]), key=lambda x:x[1], reverse=True)[:15]:

@@ -9,7 +9,7 @@ from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from utils.data_utils import *
 from utils.gpt_utils import *
 from models.GPT2 import run_gpt
-from models.LSTM import run_lstm
+# from models.LSTM import run_lstm
 
 # process human reading data
 data = super_average_data(process_data())
@@ -23,11 +23,15 @@ def add_model_measures(model_type, data):
         run_model = run_lstm
     else:
         raise Exception("invalid model type")
-
+    print(f'running {model_type} model')
+    total = len(data) * len(data['ORC'])
+    current = 0
     new_data = copy.deepcopy(data)
     for condition in data:
         # print('condition: ', condition)
         for item in data[condition]:
+            print(f'{current}/{total}', end='\r')
+            current += 1
             # print('item: ', item)
             sentence = data[condition][item]['example_sentence']
             np_beginning, np_middle, np_end = split_sentence_on(sentence, NP_region(condition))

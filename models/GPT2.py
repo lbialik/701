@@ -31,16 +31,3 @@ def run_gpt(intro, query):
     query_surprise = surprisal_of_words_norm(tokenized_query[0], query_next_token_logits)
     # print('query suprise: ', query_surprise)
     return query_surprise
-
-# def add_GPT2_measures():
-#     new_data = copy.deepcopy(data)
-#     for condition in data:
-#         print('condition: ', condition)
-#         for item in data[condition]:
-#             print('item: ', item)
-#             sentence = data[condition][item]['example_sentence']
-#             np_beginning, np_middle, np_end = split_sentence_on(sentence, NP_region(condition))
-#             v_beginning, v_middle, v_end = split_sentence_on(sentence, verb_region(condition))
-#             new_data[condition][item]['NP']['GPT2'] = run_gpt(np_beginning, np_middle)
-#             new_data[condition][item]['verb']['GPT2'] = run_gpt(v_beginning, v_middle)
-#     return new_data
