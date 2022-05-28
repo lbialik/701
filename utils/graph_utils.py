@@ -45,30 +45,25 @@ def plot_bar_graph(labels, measurements, ):
 # women_means = [25, 32, 34, 20, 25]
 
 
-def plot_box_and_whisker(labels, data, title):
+def plot_box_and_whisker(labels, data, title, save_location=None):
     fig, ax = plt.subplots()
     plt.title(title)
-    bp = ax.boxplot(data)
+    ax.boxplot(data)
     plt.xticks([1, 2, 3, 4], labels)
-    
-    # show plot
     plt.show()
+    # if save_location:
+    #     plt.savefig(save_location)
 
-data_1 = np.random.normal(100, 10, 200)
-data_2 = np.random.normal(90, 20, 200)
-data_3 = np.random.normal(80, 30, 200)
-data_4 = np.random.normal(70, 40, 200)
+def print_box_and_whisker(segment_type):
+    data = json.load(open("data/augmented_data.json"))
+    measurements = [key for key in data["ORC"]["1"][segment_type].keys()]
+    graph_data = []
+    for measure in measurements:
+        values = [data["SRC"][item][segment_type][measure]-data["ORC"][item][segment_type][measure] for item in data["ORC"]]
+        graph_data.append(values if measure != "GPT2" else [val*20000000 for val in values])
+    title = f"SRC - ORC ({segment_type})"
+    save_location = f"SRC-ORC({segment_type})_box_and_whisker"
+    plot_box_and_whisker(measurements, graph_data, title, save_location)
 
-data = [data_1, data_2, data_3, data_4]
-labels = ["label1", "label2", "label3", "label4"]
-
-data = json.load(open("data/augmented_data.json"))
-measurements = [key for key in data["ORC"]["1"]["NP"].keys()]
-ORCs = {}
-for measure in measurements:
-    ORCs[measure] = [data["ORC"][item]["NP"][measure] for item in data["ORC"]]
-from pprint import pprint
-pprint(ORCs)
-# labels = measurements
-# title = "ORC - SRC (NP)"
-# plot_box_and_whisker(labels, data, title)
+print_box_and_whisker("NP")
+print_box_and_whisker("verb")
