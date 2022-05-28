@@ -84,8 +84,9 @@ def print_scatterplots(segment_type):
     plot_scatterplots(title, lm, x_data, y_data, x_measurements, save_location=save_location)
     
 
-# print_box_and_whisker("NP")
-# print_box_and_whisker("verb")
-# print(print_bar_graph("NP"))
+print_box_and_whisker("NP")
+print_box_and_whisker("verb")
+print_bar_graph("NP")
+print_bar_graph("verb")
 print_scatterplots("NP")
 print_scatterplots("verb")
