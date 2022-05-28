@@ -15,34 +15,35 @@ def ORC_minus_SRC():
             new_data[condition][item]['verb']['GPT2'] = run_model(v_beginning, v_middle)
 
 
-def plot_bar_graph(labels, measurements, ):
-
-    for measure in measurements:
-        pass
+def plot_bar_graph(labels, measurements, men_means, women_means):
 
     x = np.arange(len(labels))  # the label locations
     width = 0.35  # the width of the bars
 
     fig, ax = plt.subplots()
-    rects1 = ax.bar(x - width/2, men_means, width, label='Men')
-    rects2 = ax.bar(x + width/2, women_means, width, label='Women')
+    ax.bar(x - width/4, men_means, width, label='Men')
+    ax.bar(x - width/2, women_means, width, label='Women')
 
     # Add some text for labels, title and custom x-axis tick labels, etc.
-    ax.set_ylabel('Scores')
-    ax.set_title('Scores by group and gender')
-    ax.set_xticks(x, labels)
+    ax.set_xlabel('X label')
+    ax.set_ylabel('Y label')
+    ax.set_title('Title')
+    # ax.set_xticks(x, labels)
     ax.legend()
+    plt.xticks(np.arange(len(labels)), labels)
 
-    ax.bar_label(rects1, padding=3)
-    ax.bar_label(rects2, padding=3)
+    # ax.bar_label(rects1, padding=3)
+    # ax.bar_label(rects2, padding=3)
 
     fig.tight_layout()
 
     plt.show()
 
-# labels = ['G1', 'G2', 'G3', 'G4', 'G5']
-# men_means = [20, 34, 30, 35, 27]
-# women_means = [25, 32, 34, 20, 25]
+labels = ['The bus driver \n that [the kids]', 'sentence 2', 'sentence 3', 'sentence 4', 'sentence 5']
+men_means = [20, 34, 30, 35, 27]
+women_means = [25, 32, 34, 20, 25]
+measurements = []
+plot_bar_graph(labels, measurements, men_means, women_means)
 
 
 def plot_box_and_whisker(labels, data, title, save_location=None):
@@ -67,5 +68,5 @@ def print_box_and_whisker(segment_type):
     save_location = f"plots/SRC-ORC({segment_type})_box_and_whisker"
     plot_box_and_whisker(measurements, graph_data, title, save_location)
 
-print_box_and_whisker("NP")
-print_box_and_whisker("verb")
+# print_box_and_whisker("NP")
+# print_box_and_whisker("verb")
