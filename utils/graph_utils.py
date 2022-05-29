@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json 
 
-measurements = ['ff', 'fp', 'gp', 'tt', 'GPT2']
+measurements = ['ff', 'fp', 'gp', "ro", 'tt', 'GPT2']
 
 def plot_bar_graph(labels, title, measurements, men_means, women_means):
 
@@ -45,7 +45,7 @@ def plot_box_and_whisker(labels, data, title, save_location=None):
     plt.show()
 
 def print_box_and_whisker(segment_type):
-    data = json.load(open("data/augmented_data_normed.json"))
+    data = json.load(open("data/augmented_data.json"))
     # measurements = [key for key in data["ORC"]["1"][segment_type].keys() if key != "ro"]
     # print(measurements)
     graph_data = []
@@ -58,7 +58,7 @@ def print_box_and_whisker(segment_type):
 
 
 def plot_scatterplots(title, lm, x_data, y_data, plot_titles,  save_location=None):
-    fig, axs = plt.subplots(1, 4, figsize=(12, 4))
+    fig, axs = plt.subplots(1, 5, figsize=(15, 5))
     plt.suptitle(title)
     axs[0].set_ylabel(f'{lm} Surprisal Difference')
     axs[0].set_xlabel('Reading Time Difference (ms)')
@@ -78,19 +78,19 @@ def print_scatterplots(segment_type):
 
     x_data, y_data = [], []
     data = json.load(open("data/augmented_data.json"))
-    x_measurements = ["ff", "fp", "gp", "tt"]
-    items = [item for item in data["ORC"].keys() if item != "14"]
-    # items = data["ORC"]
+    x_measurements = [measure for measure in measurements if measure != 'GPT2']
+    # items = [item for item in data["ORC"].keys() if item != "14"]
+    items = data["ORC"]
     for measure in x_measurements:
         values = [data["ORC"][item][segment_type][measure]-data["SRC"][item][segment_type][measure] for item in items]
         x_data.append(values)
     y_data = [data["ORC"][item][segment_type][lm]-data["SRC"][item][segment_type][lm] for item in items]
     plot_scatterplots(title, lm, x_data, y_data, x_measurements, save_location=save_location)
     
-
-# print_box_and_whisker("NP")
-print_box_and_whisker("verb")
-# print_bar_graph("NP")
-# print_bar_graph("verb")
-# print_scatterplots("NP")
-# print_scatterplots("verb")
+if __name__ == "__main__":
+    print_box_and_whisker("NP")
+    print_box_and_whisker("verb")
+    print_bar_graph("NP")
+    print_bar_graph("verb")
+    print_scatterplots("NP")
+    print_scatterplots("verb")
