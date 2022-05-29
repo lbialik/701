@@ -35,7 +35,7 @@ def print_top_x_predictions(next_token_logits, tokenizer):
             print(f'{tokenizer.decode(word_idx)} --> {val.item()/torch.sum(next_token_logits)}')
 
 def run_gpt(intro, query, data):
-    print(f'\ninput: {intro} [{query}]')
+    # print(f'\ninput: {intro} [{query}]')
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
     model = AutoModelForCausalLM.from_pretrained("gpt2")
     model.eval()
@@ -44,16 +44,16 @@ def run_gpt(intro, query, data):
     query_next_token_logits = []
     outputs = model(tokenized_intro)[0][:, -1, :][0]
     for query_token in tokenized_query[0]:
-        print(f"\nSequence so far: {' '.join([tokenizer.decode(token) for token in tokenized_intro])}")
+        # print(f"\nSequence so far: {' '.join([tokenizer.decode(token) for token in tokenized_intro])}")
         outputs = model(tokenized_intro)
         next_token_logits = outputs[0][:, -1, :]
         query_token_surprise = surprisal_of_word_norm(query_token, next_token_logits.detach())
-        print(f'token surprise: {query_token_surprise}')
-        print_top_x_predictions(next_token_logits, tokenizer)
+        # print(f'token surprise: {query_token_surprise}')
+        # print_top_x_predictions(next_token_logits, tokenizer)
         query_next_token_logits.append(next_token_logits.detach())
         tokenized_intro = torch.tensor(np.array([np.append(tokenized_intro, query_token)]))
     query_surprise = surprisal_of_words_norm(tokenized_query[0], query_next_token_logits)
-    print('query suprise: ', query_surprise)
+    # print('query suprise: ', query_surprise)
     return query_surprise
 
 # run_gpt("The mathematician that the chairman", "fired")

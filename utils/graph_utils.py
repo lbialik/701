@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json 
 
+measurements = ['ff', 'fp', 'gp', 'tt', 'GPT2']
+
 def plot_bar_graph(labels, title, measurements, men_means, women_means):
 
     x = np.arange(len(labels))  # the label locations
@@ -28,7 +30,6 @@ def print_bar_graph(segment_type):
     labels = ['The bus driver \n that [the kids]', 'sentence 2', 'sentence 3', 'sentence 4', 'sentence 5']
     men_means = [20, 34, 30, 35, 27]
     women_means = [25, 32, 34, 20, 25]
-    measurements = ['ff', 'fp', 'gp', 'tt', 'GPT2']
     plot_bar_graph(labels, title, measurements, men_means, women_means)
 
 
@@ -44,8 +45,9 @@ def plot_box_and_whisker(labels, data, title, save_location=None):
     plt.show()
 
 def print_box_and_whisker(segment_type):
-    data = json.load(open("data/augmented_data.json"))
-    measurements = [key for key in data["ORC"]["1"][segment_type].keys()]
+    data = json.load(open("data/augmented_data_normed.json"))
+    # measurements = [key for key in data["ORC"]["1"][segment_type].keys() if key != "ro"]
+    # print(measurements)
     graph_data = []
     for measure in measurements:
         values = [data["ORC"][item][segment_type][measure]-data["SRC"][item][segment_type][measure] for item in data["ORC"]]
@@ -77,16 +79,18 @@ def print_scatterplots(segment_type):
     x_data, y_data = [], []
     data = json.load(open("data/augmented_data.json"))
     x_measurements = ["ff", "fp", "gp", "tt"]
+    items = [item for item in data["ORC"].keys() if item != "14"]
+    # items = data["ORC"]
     for measure in x_measurements:
-        values = [data["ORC"][item][segment_type][measure]-data["SRC"][item][segment_type][measure] for item in data["ORC"]]
+        values = [data["ORC"][item][segment_type][measure]-data["SRC"][item][segment_type][measure] for item in items]
         x_data.append(values)
-    y_data = [data["ORC"][item][segment_type][lm]-data["SRC"][item][segment_type][lm] for item in data["ORC"]]
+    y_data = [data["ORC"][item][segment_type][lm]-data["SRC"][item][segment_type][lm] for item in items]
     plot_scatterplots(title, lm, x_data, y_data, x_measurements, save_location=save_location)
     
 
-print_box_and_whisker("NP")
+# print_box_and_whisker("NP")
 print_box_and_whisker("verb")
-print_bar_graph("NP")
-print_bar_graph("verb")
-print_scatterplots("NP")
-print_scatterplots("verb")
+# print_bar_graph("NP")
+# print_bar_graph("verb")
+# print_scatterplots("NP")
+# print_scatterplots("verb")

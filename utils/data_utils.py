@@ -17,7 +17,7 @@ exp_2_condition_map = {'1': 'ORC', '2': 'ORC', '3': 'ORC', '4': 'ORC', '5': 'SRC
 
 ignore_items = ['25', '36']
 
-measurement_types = ["ff", "fp", "gp", "tt"]
+measurement_types = ["ff", "fp", "gp", "ro", "tt"]
 
 
 def NP_region(sentence_type):
@@ -183,33 +183,3 @@ def super_average_data(data):
 # data = process_data()
 # avg_data = average_data(data)
 # super_avg_data = super_average_data(data)
-
-
-
-
-## Example Usage:
-
-# for condition in avg_data:
-#     print('condition: ', condition)
-#     for item in avg_data[condition]:
-#         print('item: ', item)
-#         for sentence in avg_data[condition][item]:
-#             print('sentence: ', sentence)
-#             for measure in avg_data[condition][item][sentence]:
-#                 print('measure: ', measure, ' = ', avg_data[condition][item][sentence][measure])
-#         print()
-
-# sentences = []
-# count = 0
-# for condition in avg_data:
-#         for item in avg_data[condition]:
-#             for sentence_element in avg_data[condition][item]:
-#                 if sentence_element['sentence'] not in sentences:
-#                     sentences.append(sentence_element['sentence'])
-#                 count+=1
-# print(f'{len(sentences)} unique sentences, {count} sentences total')
-
-# exp_1_sentences = extract_sentences(1)
-# exp_2_sentences = extract_sentences(2)
-# print(len([exp_1_sentences[item][condition] for item in exp_1_sentences for condition in exp_1_sentences[item]]))
-# print(len([exp_2_sentences[item][condition] for item in exp_2_sentences for condition in exp_2_sentences[item]]))
