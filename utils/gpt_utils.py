@@ -34,7 +34,7 @@ def print_top_x_predictions(next_token_logits, tokenizer):
         else:
             print(f'{tokenizer.decode(word_idx)} --> {val.item()/torch.sum(next_token_logits)}')
 
-def run_gpt(intro, query, data):
+def get_query_surprise(intro, query, model=None, dictionary=None):
     # print(f'\ninput: {intro} [{query}]')
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
     model = AutoModelForCausalLM.from_pretrained("gpt2")
