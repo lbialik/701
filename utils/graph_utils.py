@@ -71,14 +71,12 @@ def plot_scatterplots(title, lm, x_data, y_data, plot_titles,  save_location=Non
         plt.savefig(save_location)
     plt.show()
 
-def print_scatterplots(segment_type):
+def print_scatterplots(segment_type, lm):
     title = f"ORC-SRC ({segment_type})"
-    lm = "GPT2"
     save_location = f"plots/ORC-SRC({segment_type})_scatter"
-
     x_data, y_data = [], []
     data = json.load(open("data/augmented_data.json"))
-    x_measurements = [measure for measure in measurements if measure != 'GPT2']
+    x_measurements = [measure for measure in measurements if (measure != lm and measure != "ro")]
     # items = [item for item in data["ORC"].keys() if item != "14"]
     items = data["ORC"]
     for measure in x_measurements:
@@ -88,9 +86,11 @@ def print_scatterplots(segment_type):
     plot_scatterplots(title, lm, x_data, y_data, x_measurements, save_location=save_location)
     
 if __name__ == "__main__":
-    print_box_and_whisker("NP")
-    print_box_and_whisker("verb")
-    print_bar_graph("NP")
-    print_bar_graph("verb")
-    print_scatterplots("NP")
-    print_scatterplots("verb")
+    # print_box_and_whisker("NP")
+    # print_box_and_whisker("verb")
+    # print_bar_graph("NP")
+    # print_bar_graph("verb")
+    # print_scatterplots("NP","GPT2")
+    # print_scatterplots("verb", "GPT2")
+    print_scatterplots("NP","LSTM")
+    print_scatterplots("verb", "LSTM")

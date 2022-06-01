@@ -3,6 +3,7 @@ import token
 import numpy as np
 import copy
 import torch
+import os
 import argparse
 # import transformers
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
@@ -13,8 +14,13 @@ import utils.lstm_utils as lstm_utils
 # from models.LSTM import run_lstm
 
 # process human reading data
-data = super_average_data(process_data())
-with open('data/augmented_data.json', "w+") as f:
+fname = 'data/augmented_data.json'
+if os.path.isfile(fname):
+    data = json.load(open('data/augmented_data.json'))
+else:
+    data = super_average_data(process_data())
+
+with open(fname, "w+") as f:
     json.dump(data, f)
 
 def add_model_measures(model_type, data):

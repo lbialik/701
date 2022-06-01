@@ -17,18 +17,20 @@ np.random.seed(50360)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
-def surprisal_of_words_norm(word_idxs, next_token_logit_list):
+raw = True 
+
+def surprisal_of_words_norm(word_idxs, next_token_scores_list):
     num = 0
     denom = 0
-    # assert(len(word_idxs) == len(next_token_logit_list))
-    # for i, word_idx in enumerate(word_idxs):
-    #     num += next_token_logit_list[i][0][word_idx]
-    #     denom += torch.sum(next_token_logit_list[i])
-    # if raw:
-    #     return float(num/len(word_idxs))
-    # # F.softmax(next_word_scores, dim=0)
-    # return float(num/denom)
-    return 1
+    assert(len(word_idxs) == len(next_token_scores_list))
+    for i, word_idx in enumerate(word_idxs):
+        num += next_token_scores_list[i][word_idx]
+        denom += torch.sum(next_token_scores_list[i])
+        # print(f'score = {next_token_scores_list[i][word_idx]}, scores sum = {torch.sum(next_token_scores_list[i])}')
+    if raw:
+        return float(1/(num/len(word_idxs)))
+    else:
+        return float(1/(denom-num))
 
 def get_query_surprise(intro, query, model, dictionary):
     intro, query = intro.split(), query.split()
@@ -44,8 +46,8 @@ def get_query_surprise(intro, query, model, dictionary):
                     for w in query]
     query_next_token_scores = []
     for query_token in tokenized_query:
-        print(f'intro: {[dictionary.idx2word[w] for w in tokenized_intro]}')
-        print(f'query: {dictionary.idx2word[query_token]}')
+        # print(f'intro: {[dictionary.idx2word[w] for w in tokenized_intro]}')
+        # print(f'query: {dictionary.idx2word[query_token]}')
 
         input = torch.tensor(tokenized_intro, dtype=torch.long).cuda()
 
@@ -53,6 +55,14 @@ def get_query_surprise(intro, query, model, dictionary):
         cur_sentence_output, cur_sentence_hidden = model(input.view(-1, 1), # (sequence_length, batch_size).
                             model.init_hidden(1)) # one input at a time, thus batch_size = 1
         next_word_scores = cur_sentence_output[-1].view(-1)
+        # print(next_word_scores)
+        if raw:
+            min_score, max_score = min(next_word_scores), max(next_word_scores) 
+            if min_score < 0:
+                # shift all scores to be positive
+                next_word_scores = next_word_scores - min_score
+        else:
+            next_word_scores = F.softmax(next_word_scores, dim=0)
         query_next_token_scores.append(next_word_scores.detach())
         tokenized_intro.append(query_token)
     query_surprise = surprisal_of_words_norm(tokenized_query, query_next_token_scores)
