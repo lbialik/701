@@ -1,12 +1,9 @@
-import json
-# import os
 import sys
 import torch
 import torch.nn as nn
 import numpy as np
 from pprint import pprint
 import torch.nn.functional as F
-# from utils.data_utils import *
 
 sys.path.append('colorlessgreenRNNs/src/language_models')
 import dictionary_corpus
@@ -17,34 +14,60 @@ np.random.seed(50360)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
-def surprise(model, lossfn, tokens_tensor, labels):
-    # model(input.view(-1, 1), model.init_hidden(1))
-    loss= lossfn(model(tokens_tensor), labels)
-    return np.exp(loss.cpu().detach().numpy())
+def set_up_model():
+    torch.cuda.empty_cache()
+    # Load Pre-trained Model
+    fn = 'colorlessgreenRNNs/src/hidden650_batch128_dropout0.2_lr20.0.pt'
+    if torch.cuda.is_available():
+        torch.device('cuda')
+        model_ = torch.load(fn)
+    else:
+        torch.device('cpu')
+        model_ = torch.load(fn, map_location=torch.device('cpu'))
+    model = RNNModel("LSTM", 50001, 650, 650, 2, 0.2, False)
+    model.load_state_dict(model_.state_dict())
+    model = model.cuda()
 
-def get_query_surprise(intro, query, model, dictionary):
-    sentence = intro + ' ' + query
-    intro, query = intro.split(), query.split()
+    data_path = "colorlessgreenRNNs/data/lm/English"
+    dictionary = dictionary_corpus.Dictionary(data_path)
+
+    return model, dictionary
+
+def tokenize(sentence, dictionary):
+    sentence = sentence.split()
+    tokenized_sentence = []
     for w in sentence:
         if w not in dictionary.word2idx:
             print(w, ' not in vocab!')
+            tokenized_sentence.append(dictionary.word2idx["<unk>"])
+        else:
+            tokenized_sentence.append(dictionary.word2idx[w])
+    return tokenized_sentence
 
-    tokenized_intro = [dictionary.word2idx[w]  if w in dictionary.word2idx
-                                        else dictionary.word2idx["<unk>"]
-                    for w in intro]
-    tokenized_query = [dictionary.word2idx[w]  if w in dictionary.word2idx
-                                        else dictionary.word2idx["<unk>"]
-                    for w in query]
-    tokenized_sentence = [dictionary.word2idx[w]  if w in dictionary.word2idx
-                                        else dictionary.word2idx["<unk>"]
-                    for w in sentence]
+# def surprise(model, lossfn, tokens_tensor, labels):
+#     loss = lossfn(model(tokens_tensor, model.init_hidden(1)), labels, reduction='none')
+#     return np.exp(loss.cpu().detach().numpy())
 
-    masked_intro = torch.ones(len(tokenized_intro), dtype=int) * -100
-    masked_sentence = torch.cat((masked_intro, tokenized_query))
-    tokenized_labels = torch.reshape(masked_sentence, (1,-1))
-    lossfn = torch.nn.MSELoss
-    query_surprise = surprise(model, lossfn, tokenized_sentence, tokenized_labels)
+def get_query_surprise(intro, query, model, dictionary):
+    sentence = intro + ' ' + query
+    tokenized_sentence = tokenize(sentence, dictionary)
+    tokenized_intro = tokenize(intro, dictionary)
+    tokenized_query = tokenize(query, dictionary)
+    tokenized_labels_masked = [-100] * len(tokenized_intro) + tokenized_query
+
+    # lossfn = torch.nn.MSELoss
+    # query_surprise = surprise(model, lossfn, tokenized_sentence, tokenized_sentence)
+
+    input = torch.tensor(tokenized_sentence, dtype=float, requires_grad=True).long().cuda()
+    lossfn = nn.NLLLoss(ignore_index = -100)
+    model_outputs, _ = model(input.view(-1, 1), model.init_hidden(1))
+    model_outputs = model_outputs.reshape(len(tokenized_sentence), -1).cuda()
+    labels = torch.tensor(tokenized_labels_masked).long().cuda()
+    query_surprise = lossfn(model_outputs, labels)
+
     print(query_surprise)
+
+get_query_surprise("Hello my name", "is banana", *set_up_model())
 
     # query_next_token_scores = []
     # for query_token in tokenized_query:
@@ -69,24 +92,3 @@ def get_query_surprise(intro, query, model, dictionary):
     #     tokenized_intro.append(query_token)
     # query_surprise = surprisal_of_words_norm(tokenized_query, query_next_token_scores)
     # return query_surprise
-
-def set_up_model():
-    torch.cuda.empty_cache()
-    # Load Pre-trained Model
-    fn = 'colorlessgreenRNNs/src/hidden650_batch128_dropout0.2_lr20.0.pt'
-    if torch.cuda.is_available():
-        torch.device('cuda')
-        model_ = torch.load(fn)
-    else:
-        torch.device('cpu')
-        model_ = torch.load(fn, map_location=torch.device('cpu'))
-    model = RNNModel("LSTM", 50001, 650, 650, 2, 0.2, False)
-    model.load_state_dict(model_.state_dict())
-    model = model.cuda()
-
-    data_path = "colorlessgreenRNNs/data/lm/English"
-    dictionary = dictionary_corpus.Dictionary(data_path)
-
-    return model, dictionary
-
-get_query_surprise("Hello my name", "is banana", *set_up_model())
