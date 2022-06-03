@@ -47,7 +47,7 @@ def tokenize(sentence, dictionary):
 def surprisal(token, next_token_prob):
     return -np.log(next_token_prob[token])
 
-def get_query_surprise(intro, query, model, dictionary):
+def get_query_surprisal(intro, query, model, dictionary):
     tokenized_intro = tokenize(intro, dictionary)
     tokenized_query = tokenize(query, dictionary)
     query_token_surprisals = []
@@ -60,5 +60,5 @@ def get_query_surprise(intro, query, model, dictionary):
         token_surprisal = surprisal(query_token, next_word_probs)
         query_token_surprisals.append(token_surprisal)
         tokenized_intro.append(query_token)
-    query_surprise = np.mean(query_token_surprisals)
-    return query_surprise
+    query_surprisal = np.mean(query_token_surprisals)
+    return query_surprisal

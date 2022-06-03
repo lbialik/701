@@ -27,7 +27,7 @@ def get_query_surprisal(intro, query, model=None, dictionary=None):
         token_surprisal = surprisal(query_token, next_token_probabilities.detach())
         query_token_surprisals.append(token_surprisal)
         tokenized_intro = torch.tensor(np.array([np.append(tokenized_intro, query_token)]))
-    query_surprise = np.mean(query_token_surprisals)
-    return query_surprise
+    query_surprisal = np.mean(query_token_surprisals)
+    return query_surprisal
 
 get_query_surprisal('Hello my name is', 'Rachel Elizabeth')
