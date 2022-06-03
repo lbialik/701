@@ -44,9 +44,9 @@ def tokenize(sentence, dictionary):
             tokenized_sentence.append(dictionary.word2idx[w])
     return tokenized_sentence
 
-# def surprise(model, lossfn, tokens_tensor, labels):
-#     loss = lossfn(model(tokens_tensor, model.init_hidden(1)), labels, reduction='none')
-#     return np.exp(loss.cpu().detach().numpy())
+def surprise(model, tokens_tensor, labels):
+    probability = 0
+    return -np.log(probability)
 
 def get_query_surprise(intro, query, model, dictionary):
     sentence = intro + ' ' + query
@@ -69,6 +69,7 @@ def get_query_surprise(intro, query, model, dictionary):
 
 get_query_surprise("Hello my name", "is banana", *set_up_model())
 
+# def old_code():
     # query_next_token_scores = []
     # for query_token in tokenized_query:
     #     # print(f'intro: {[dictionary.idx2word[w] for w in tokenized_intro]}')
