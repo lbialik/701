@@ -44,52 +44,21 @@ def tokenize(sentence, dictionary):
             tokenized_sentence.append(dictionary.word2idx[w])
     return tokenized_sentence
 
-def surprise(model, tokens_tensor, labels):
-    probability = 0
-    return -np.log(probability)
+def surprisal(token, next_token_prob):
+    return -np.log(next_token_prob[token])
 
 def get_query_surprise(intro, query, model, dictionary):
-    sentence = intro + ' ' + query
-    tokenized_sentence = tokenize(sentence, dictionary)
     tokenized_intro = tokenize(intro, dictionary)
     tokenized_query = tokenize(query, dictionary)
-    tokenized_labels_masked = [-100] * len(tokenized_intro) + tokenized_query
-
-    # lossfn = torch.nn.MSELoss
-    # query_surprise = surprise(model, lossfn, tokenized_sentence, tokenized_sentence)
-
-    input = torch.tensor(tokenized_sentence, dtype=float, requires_grad=True).long().cuda()
-    lossfn = nn.NLLLoss(ignore_index = -100)
-    model_outputs, _ = model(input.view(-1, 1), model.init_hidden(1))
-    model_outputs = model_outputs.reshape(len(tokenized_sentence), -1).cuda()
-    labels = torch.tensor(tokenized_labels_masked).long().cuda()
-    query_surprise = lossfn(model_outputs, labels)
-
-    print(query_surprise)
-
-get_query_surprise("Hello my name", "is banana", *set_up_model())
-
-# def old_code():
-    # query_next_token_scores = []
-    # for query_token in tokenized_query:
-    #     # print(f'intro: {[dictionary.idx2word[w] for w in tokenized_intro]}')
-    #     # print(f'query: {dictionary.idx2word[query_token]}')
-
-    #     input = torch.tensor(tokenized_intro, dtype=torch.long).cuda()
-
-    #     ## Extract the hidden and output layers at each input token:
-    #     cur_sentence_output, cur_sentence_hidden = model(input.view(-1, 1), # (sequence_length, batch_size).
-    #                         model.init_hidden(1)) # one input at a time, thus batch_size = 1
-    #     next_word_scores = cur_sentence_output[-1].view(-1)
-        
-    #     if raw:
-    #         min_score, max_score = min(next_word_scores), max(next_word_scores) 
-    #         if min_score < 0:
-    #             # shift all scores to be positive
-    #             next_word_scores = next_word_scores - min_score
-    #     else:
-    #         next_word_scores = F.softmax(next_word_scores, dim=0)
-    #     query_next_token_scores.append(next_word_scores.detach())
-    #     tokenized_intro.append(query_token)
-    # query_surprise = surprisal_of_words_norm(tokenized_query, query_next_token_scores)
-    # return query_surprise
+    query_token_surprisals = []
+    for query_token in tokenized_query:
+        input = torch.tensor(tokenized_intro, dtype=torch.long).cuda()
+        cur_sentence_output, cur_sentence_hidden = model(input.view(-1, 1), # (sequence_length, batch_size).
+                                                model.init_hidden(1)) # one input at a time, thus batch_size = 1
+        next_word_scores = cur_sentence_output[-1].view(-1).cpu().detach()
+        next_word_probs = F.softmax(next_word_scores, dim=0)
+        token_surprisal = surprisal(query_token, next_word_probs)
+        query_token_surprisals.append(token_surprisal)
+        tokenized_intro.append(query_token)
+    query_surprise = np.mean(query_token_surprisals)
+    return query_surprise

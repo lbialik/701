@@ -9,8 +9,8 @@ def print_top_x_predictions(next_token_logits, tokenizer):
     for word_idx, val in sorted(enumerate(next_token_logits[0]), key=lambda x:x[1], reverse=True)[:15]:
         print(f'{tokenizer.decode(word_idx)} --> {val.item()/torch.sum(next_token_logits)}')
 
-def surprisal(token, prediction):
-    return -np.log(prediction[token])
+def surprisal(token, next_token_prob):
+    return -np.log(next_token_prob[token])
     
 def get_query_surprisal(intro, query, model=None, dictionary=None):
     # print(f'\ninput: {intro} [{query}]')
