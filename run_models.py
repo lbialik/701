@@ -26,10 +26,10 @@ with open(fname, "w+") as f:
 def add_model_measures(model_type, data):
     if model_type == "GPT2":
         model, dictionary = None, None
-        run_model = gpt_utils.get_query_surprise
+        run_model = gpt_utils.get_query_surprisal
     elif model_type == "LSTM":
         model, dictionary = lstm_utils.set_up_model()
-        run_model = lstm_utils.get_query_surprise
+        run_model = lstm_utils.get_query_surprisal
     else:
         raise Exception("invalid model type")
 

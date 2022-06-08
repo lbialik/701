@@ -13,20 +13,24 @@ torch.manual_seed(50360)
 np.random.seed(50360)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
+cuda = False
 
 def set_up_model():
     torch.cuda.empty_cache()
     # Load Pre-trained Model
     fn = 'colorlessgreenRNNs/src/hidden650_batch128_dropout0.2_lr20.0.pt'
     if torch.cuda.is_available():
+        cuda = True
         torch.device('cuda')
         model_ = torch.load(fn)
     else:
+        cuda = False
         torch.device('cpu')
         model_ = torch.load(fn, map_location=torch.device('cpu'))
     model = RNNModel("LSTM", 50001, 650, 650, 2, 0.2, False)
     model.load_state_dict(model_.state_dict())
-    model = model.cuda()
+    if cuda:
+        model = model.cuda()
 
     data_path = "colorlessgreenRNNs/data/lm/English"
     dictionary = dictionary_corpus.Dictionary(data_path)
@@ -52,7 +56,9 @@ def get_query_surprisal(intro, query, model, dictionary):
     tokenized_query = tokenize(query, dictionary)
     query_token_surprisals = []
     for query_token in tokenized_query:
-        input = torch.tensor(tokenized_intro, dtype=torch.long).cuda()
+        input = torch.tensor(tokenized_intro, dtype=torch.long)
+        if cuda:
+            input = input.cuda()
         cur_sentence_output, cur_sentence_hidden = model(input.view(-1, 1), # (sequence_length, batch_size).
                                                 model.init_hidden(1)) # one input at a time, thus batch_size = 1
         next_word_scores = cur_sentence_output[-1].view(-1).cpu().detach()
@@ -61,4 +67,4 @@ def get_query_surprisal(intro, query, model, dictionary):
         query_token_surprisals.append(token_surprisal)
         tokenized_intro.append(query_token)
     query_surprisal = np.mean(query_token_surprisals)
-    return query_surprisal
+    return float(query_surprisal)

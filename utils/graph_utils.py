@@ -2,8 +2,10 @@ from tkinter import Y
 import matplotlib.pyplot as plt
 import numpy as np
 import json 
+from scipy.stats.stats import pearsonr   
 
-measurements = ['ff', 'fp', 'gp', "ro", 'tt', 'GPT2']
+measurements = ['ff', 'fp', 'gp', "ro", 'tt']
+lms = ['LSTM', 'GPT2']
 
 def plot_bar_graph(labels, title, measurements, men_means, women_means):
 
@@ -32,7 +34,6 @@ def print_bar_graph(segment_type):
     women_means = [25, 32, 34, 20, 25]
     plot_bar_graph(labels, title, measurements, men_means, women_means)
 
-
 def plot_box_and_whisker(labels, data, title, save_location=None):
     fig, ax = plt.subplots()
     plt.title(title)
@@ -45,52 +46,57 @@ def plot_box_and_whisker(labels, data, title, save_location=None):
     plt.show()
 
 def print_box_and_whisker(segment_type):
-    data = json.load(open("data/augmented_data.json"))
-    # measurements = [key for key in data["ORC"]["1"][segment_type].keys() if key != "ro"]
-    # print(measurements)
+    data = json.load(open("data/augmented_data.json"), )
+    
     graph_data = []
-    for measure in measurements:
+    measures = [m for m in measurements + lms if m !=  "ro"]
+    for measure in measures:
         values = [data["ORC"][item][segment_type][measure]-data["SRC"][item][segment_type][measure] for item in data["ORC"]]
-        graph_data.append(values if measure != "GPT2" else [val*20000000 for val in values])
-    title = f"ORC - SRC ({segment_type})"
+        if measure in ["LSTM", "GPT2"]:
+            values = np.array(values) * 100
+        graph_data.append(values)
+    title = f"ORC - SRC Difference ({segment_type})"
     save_location = f"plots/ORC-SRC({segment_type})_box_and_whisker"
-    plot_box_and_whisker(measurements, graph_data, title, save_location)
+    plot_box_and_whisker(measures, graph_data, title, save_location)
 
 
 def plot_scatterplots(title, lm, x_data, y_data, plot_titles,  save_location=None):
     fig, axs = plt.subplots(1, 5, figsize=(15, 5))
     plt.suptitle(title)
-    axs[0].set_ylabel(f'{lm} Surprisal Difference')
-    axs[0].set_xlabel('Reading Time Difference (ms)')
+    axs[0].set_ylabel(f'{lm} Surprisal')
     for i in range(len(plot_titles)):
         axs[i].scatter(x_data[i], y_data)
         axs[i].set_title(plot_titles[i])
-        axs[i].set_xlabel("Reading Time Difference (ms)")
+        axs[i].set_xlabel("Reading Time (ms)")
+        #obtain m (slope) and b(intercept) of linear regression line
+        m, b = np.polyfit(x_data[i], y_data, 1)
+        correlation = np.round(pearsonr(x_data[i], y_data)[0], 3)
+        axs[i].plot(x_data[i], m*np.array(x_data[i])+b, color='lightblue', label=f"correlation = {correlation}")
+        axs[i].legend()
 
     if save_location:
         plt.savefig(save_location)
     plt.show()
 
 def print_scatterplots(segment_type, lm):
-    title = f"ORC-SRC ({segment_type})"
+    title = f"ORC-SRC Difference ({segment_type})"
     save_location = f"plots/ORC-SRC({segment_type})_scatter"
     x_data, y_data = [], []
     data = json.load(open("data/augmented_data.json"))
-    x_measurements = [measure for measure in measurements if (measure != lm and measure != "ro")]
+    x_measurements = [measure for measure in measurements if (measure != lm)]
     # items = [item for item in data["ORC"].keys() if item != "14"]
     items = data["ORC"]
     for measure in x_measurements:
         values = [data["ORC"][item][segment_type][measure]-data["SRC"][item][segment_type][measure] for item in items]
         x_data.append(values)
     y_data = [data["ORC"][item][segment_type][lm]-data["SRC"][item][segment_type][lm] for item in items]
+    # pearsonr(x, y)
     plot_scatterplots(title, lm, x_data, y_data, x_measurements, save_location=save_location)
     
 if __name__ == "__main__":
-    # print_box_and_whisker("NP")
-    # print_box_and_whisker("verb")
-    # print_bar_graph("NP")
-    # print_bar_graph("verb")
-    # print_scatterplots("NP","GPT2")
-    # print_scatterplots("verb", "GPT2")
-    print_scatterplots("NP","LSTM")
-    print_scatterplots("verb", "LSTM")
+#     for region in ["NP", "verb"]:
+#         print_box_and_whisker(region)
+        
+    for region in ["NP", "verb"]:
+        for lm in lms:
+            print_scatterplots(region,lm)
