@@ -56,7 +56,7 @@ def print_box_and_whisker(segment_type):
             values = np.array(values) * 100
         graph_data.append(values)
     title = f"ORC - SRC Difference ({segment_type})"
-    save_location = f"plots/ORC-SRC({segment_type})_box_and_whisker"
+    save_location = f"plots/box_and_whisker/ORC-SRC({segment_type})_box_and_whisker"
     plot_box_and_whisker(measures, graph_data, title, save_location)
 
 
@@ -80,22 +80,20 @@ def plot_scatterplots(title, lm, x_data, y_data, plot_titles,  save_location=Non
 
 def print_scatterplots(segment_type, lm):
     title = f"ORC-SRC Difference ({segment_type})"
-    save_location = f"plots/ORC-SRC({segment_type})_scatter"
+    save_location = f"plots/scatter/ORC-SRC({segment_type})_scatter_{lm}"
     x_data, y_data = [], []
     data = json.load(open("data/augmented_data.json"))
     x_measurements = [measure for measure in measurements if (measure != lm)]
-    # items = [item for item in data["ORC"].keys() if item != "14"]
     items = data["ORC"]
     for measure in x_measurements:
         values = [data["ORC"][item][segment_type][measure]-data["SRC"][item][segment_type][measure] for item in items]
         x_data.append(values)
     y_data = [data["ORC"][item][segment_type][lm]-data["SRC"][item][segment_type][lm] for item in items]
-    # pearsonr(x, y)
     plot_scatterplots(title, lm, x_data, y_data, x_measurements, save_location=save_location)
     
 if __name__ == "__main__":
-#     for region in ["NP", "verb"]:
-#         print_box_and_whisker(region)
+    for region in ["NP", "verb"]:
+        print_box_and_whisker(region)
         
     for region in ["NP", "verb"]:
         for lm in lms:
