@@ -90,11 +90,30 @@ def print_scatterplots(segment_type, lm):
         x_data.append(values)
     y_data = [data["ORC"][item][segment_type][lm]-data["SRC"][item][segment_type][lm] for item in items]
     plot_scatterplots(title, lm, x_data, y_data, x_measurements, save_location=save_location)
+
+def print_baseline_scatterplots(lm, clause_type):
+    title = f"{clause_type} Human Reading Time and {lm} Surprisal"
+    save_location = f"plots/scatter/{lm}_{clause_type}"
+    x_data, y_data = [], []
+    data = json.load(open("data/augmented_data.json"))
+    x_measurements = [measure for measure in measurements if (measure != lm)]
+    items = data[clause_type]
+    for segment_type in ["NP", "verb"]:
+        for measure in x_measurements:
+            values = [data[clause_type][item][segment_type][measure] for item in items]
+            x_data.append(values)
+        y_data = [data[clause_type][item][segment_type][lm] for item in items]
+    plot_scatterplots(title, lm, x_data, y_data, x_measurements, save_location=save_location)
     
 if __name__ == "__main__":
-    for region in ["NP", "verb"]:
-        print_box_and_whisker(region)
+
+    for lm in lms:
+        for clause_type in ["SRC", "ORC"]:
+            print_baseline_scatterplots(lm, clause_type)
+
+    # for region in ["NP", "verb"]:
+    #     print_box_and_whisker(region)
         
-    for region in ["NP", "verb"]:
-        for lm in lms:
-            print_scatterplots(region,lm)
+    # for region in ["NP", "verb"]:
+    #     for lm in lms:
+    #         print_scatterplots(region,lm)
